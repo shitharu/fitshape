@@ -1,0 +1,51 @@
+<form method="post" action="searchuser.php">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+    <br><br>
+    <label for="id">ID:</label>
+    <input type="text" id="id" name="id">
+    <br><br>
+    <input type="submit" value="Search">
+</form>
+
+
+<form method="post" action="search.php">
+    <input type="text" name="search" placeholder="Search...">
+    <input type="submit" value="Search">
+  </form>
+
+  
+
+  <!-- HTML form with CSS styling -->
+<form method="post" action="search.php" class="search-form">
+    <input type="text" name="search" placeholder="Search..." class="search-input">
+    <input type="submit" value="Search" class="search-btn">
+  </form>
+  
+  <!-- Results table with CSS styling -->
+  <table class="results-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php
+      // Loop through matching results and output as table rows
+      if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+          echo "<tr>";
+          echo "<td>" . $row["id"] . "</td>";
+          echo "<td>" . $row["name"] . "</td>";
+          echo "<td>" . $row["email"] . "</td>";
+          echo "</tr>";
+        }
+      } else {
+        echo "<tr><td colspan='3'>No results found</td></tr>";
+      }
+      ?>
+    </tbody>
+  </table>
+  

@@ -1,0 +1,917 @@
+<html>
+<head>
+
+    <title>Hourglass Body Shape</title>
+    <link rel="icon" href="images/logo/logo.PNG">
+
+
+    <link rel="stylesheet" href="css//home_css.css">
+  
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style type="text/css">
+
+
+*{
+ padding: 0px;
+ margin:0px;
+ box-sizing: border-box;
+}
+
+.header{
+  height: 400px;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  margin:0;
+
+  } 
+
+  .navbar {
+      width: 100%;
+      padding: 10px;
+      position: fixed;
+      top: 0px;
+      text-align: center;
+      transition: .5s;
+    }
+
+    .navbar ul li {
+      display: inline-block;
+      padding: 10px 30px;
+      color: black;
+      font-size: 24px;
+      text-decoration: none;
+      font-family: sans-serif;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: .5s;
+    }
+
+
+    .navbar ul li:hover {
+      background: rgb(0, 0, 0);
+
+    }
+
+    .nav-area {
+      float: right;
+      list-style: none;
+    }
+
+    .nav-area li {
+      display: inline-block;
+    }
+
+    .nav-area li a {
+      color: black;
+      text-decoration: none;
+      padding: 5px 5px;
+      font-family: poppins;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+
+    .nav-area li a:hover {
+
+      color: white;
+    }
+
+.logo {
+	float: left;
+}
+.logo img {
+	width: 50px;
+	padding-left: 20px 0;
+}
+
+ .logo {
+	float: left;
+    width: 120px;
+    margin-left: 20px;
+    margin-top:-5px;;
+    }
+.logo img {
+	width: 100%;
+	padding: 15px 0;
+} 
+
+@media (max-width:600px) {
+	.wrapper {
+		width: 100%;
+	}
+	.logo {
+		float: none;
+		width: 50%;
+		text-align: center;
+		margin: auto;
+	}
+	
+	.nav-area {
+		float: none;
+		margin-top: 0;
+	}
+	.nav-area li a {
+		padding: 5px;
+		font-size: 11px;
+	}
+	.nav-area {
+		text-align: center;
+	}
+	.welcome-text {
+		width: 100%;
+		height: auto;
+		margin: 30% 0;
+	}
+	.welcome-text h1 {
+		font-size: 30px;
+	}
+}
+
+.cover{
+  padding: top 50px ;
+  padding-bottom: 50px;
+	-webkit-background-size: cover;
+	background-size: cover;
+  }
+
+
+.footer-dark {
+    padding:50px 0;
+    color:#264653;
+    background:#ddd;
+    background-repeat:no-repeat;
+    
+  }
+  
+  .footer-dark h3 {
+    margin-top:0;
+    margin-bottom:12px;
+    font-weight:bold;
+    font-size:16px;
+  }
+  
+  .footer-dark ul {
+    padding:0;
+    list-style:none;
+    line-height:1.6;
+    font-size:14px;
+    margin-bottom:0;
+  }
+  
+  .footer-dark ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.6;
+  }
+  
+  .footer-dark ul a:hover {
+    opacity:0.8;
+  }
+  
+  @media (max-width:767px) {
+    .footer-dark .item:not(.social) {
+      text-align:center;
+      padding-bottom:20px;
+    }
+  }
+  
+  .footer-dark .item.text {
+    margin-bottom:36px;
+  }
+  
+  @media (max-width:767px) {
+    .footer-dark .item.text {
+      margin-bottom:0;
+    }
+  }
+  
+  .footer-dark .item.text p {
+    opacity:0.6;
+    margin-bottom:0;
+  }
+  
+  .footer-dark .item.social {
+    text-align:center;
+  }
+  
+  @media (max-width:991px) {
+    .footer-dark .item.social {
+      text-align:center;
+      margin-top:20px;
+    }
+  }
+  
+  .footer-dark .item.social > a {
+    font-size:20px;
+    width:36px;
+    height:36px;
+    line-height:36px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+    margin:0 8px;
+    color:#264653;
+    opacity:0.75;
+  }
+  
+  .footer-dark .item.social > a:hover {
+    opacity:0.9;
+  }
+  
+  .footer-dark .copyright {
+    text-align:center;
+    padding-top:24px;
+    opacity:0.3;
+    font-size:13px;
+    margin-bottom:0;
+  }
+
+ .background1
+  {
+    background-image: url('https://i.pinimg.com/originals/8d/29/11/8d291189ea4144be3c5eb5a015559c8e.jpg');
+    width: 100%; 
+    margin-top:130px; 
+  
+  }
+
+  .ul{
+    padding-left: 70px;
+    padding-right: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: left;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 140%;
+  }
+
+  .topic{
+    font-size: 40px;
+    font-style: bold;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .p{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 140%;
+  }
+
+  .top-container{
+    background-color:rgb(150, 47, 110);
+     
+  }
+
+  .jeans-container{
+    background-color:rgb(18, 13, 94);  
+  }
+
+  .pants-container{
+    background-color:rgb(26, 90, 119);  
+  }
+
+  .jacket-container{
+    background-color:rgb(143, 50, 89);  
+  }
+
+  .skirt-container{
+    background-color:rgb(179, 93, 219);  
+  }
+  
+  .dress-container{
+    background-color:rgb(90, 11, 97);  
+  }
+
+  .swimmer-container{
+    background-color:rgb(184, 58, 8);  
+  }
+
+  .shoe-container{
+    background-color:rgb(5, 97, 17);  
+  }
+
+  
+
+  table, th, td {
+    padding-left: 120px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: justify;
+    border: 1px solid;
+    
+    }
+
+    .center {
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    .h1{
+      padding-top: 100px;
+    }
+
+    .p2{
+    
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 140%;
+  }
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header" style="margin-top: 0;">
+
+<div class="background"style="margin-top:0px;">
+<img src="https://wallpaperset.com/w/full/3/7/3/83509.jpg" width="100%;margin-top:130px;">
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
+    <div class="container">
+
+        <header>
+            <div class="navbar" id='nav'>
+                <div class="logo">
+                    <img src="images/logo/logo.PNG" alt="" style="margin-left:-200px;">
+                </div>
+                <ul class="nav-area">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="About Us.html">About Us</a></li>
+                    <li><a href="x.html">Login</a></li>
+                    <li><a href="x.html">Body Shape Analyzer</a></li>
+                    <li style="margin-right:120px;"><a href="x.html">XXXX</a></li>
+                    </ul>
+            </div>  
+        </header>     
+    </div>
+</nav>
+</div>
+</div>
+
+  <script type="text/javascript">
+     
+    var  nav = document.getElementById('nav');
+    
+        window.onscroll = function(){
+
+        if (window.pageYOffset >100) {
+
+            nav.style.background = "white";
+            nav.style.boxShadow = "0px 2px 2px white";
+            nav.style.height="80px";
+            nav.style.paddingTop="15px";
+            nav.style.opacity=".7";
+        }
+        else{
+        nav.style.background = "transparent";
+            nav.style.boxShadow = "none";
+        }
+        }
+
+    </script> 
+
+
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <script type="text/javascript">
+     var nav = document.querySelector('nav');
+
+     window.addEventListener('scroll', function () {
+       if (window.pageYOffset > 100) {
+        nav.style.background = "white";
+        nav.style.boxShadow = "0px 2px 2px white";
+        nav.style.height="80px";
+        nav.style.paddingTop="15px";
+        nav.style.opacity=".7";
+       } else {
+         nav.classList.remove('bg-dark', 'shadow');
+       }
+     });
+   </script>     
+
+</div>
+	
+
+<div class="background1">
+
+            <div class="col-lg-10 mx-auto text-center margin-left:5px; margin-right:50px;">
+                <h1 class="h1" style="font-family:'Trajan Pro'; color:#000000; margin-top:-400px;">
+
+                  <b>HOURGLASS BODY SHAPE</b></h1>    
+
+                  <br><br><br>  
+
+                    <h2 align="left">CHARACTERISTICS OF <br> AN HOURGLASS BODY SHAPE</h2><br>
+                    
+                    <ul class="p2" align="left">
+                      <li>Your shoulders and hips are around the same width.</li>
+                      <li>You have a very well-defined waistline.</li>
+                      <li>Your bust and butt are full.</li>
+                      <li>You would describe your body as curvy.</li>
+                    </ul>
+                    
+                    <br><br>  <br><br>   
+
+                  <h2 align="left">
+                    HERE ARE SOME TIPS AND TRICKS TO KEEP IN MIND NEXT TIME YOU ADD TO YOUR WARDROBE:
+                  </h2>
+                      
+                    <h4 class="mb-1" style="font-family: 'Tekton Pro';">
+   
+                        <div class="top-container w3-round-xxlarge">
+                            <hr class="my-5">
+                                <p class="topic" style="color:white;">TOPS</p>
+                            <hr class="my-3">
+                                <p class="p" style="color:white;">
+                                  Tops for hourglass body shapes should be fitted and structured to show off your bust and shoulders. 
+                                  Some great choices for tops and blouses include:
+                                </p>
+
+                            <img src="images/Hourglass_dress/tops_600x600.webp" height="600px" width="600px" w3-round-xxlarge>
+                            <br><br>
+
+
+
+                            <table class="ul center" style="color: #ddd;"><b>
+                                <tr>
+                                    <th>Top Types</th>
+                                    <th>Style Describes</th>
+                                </tr>
+                                <tr>
+                                    <td>Wrap</td>
+                                    <td>A classic wrap top cuts in at your natural waistline, accenting your curves.</td>
+                                </tr>
+                                <tr>
+                                    <td>V-Neck</td>
+                                    <td>A v-neck top draws attention to your shoulders and bust to accentuate your figure.</td>
+                                </tr>
+                                <tr>
+                                    <td>Keyhole</td>
+                                    <td>A keyhole top has an open spot below the collar. 
+                                      This fun detail can look great on your hourglass figure and adds a little extra visual interest without being overly embellished.</td>
+                                 </tr>
+                                <tr>
+                                    <td>Off-the-Shoulder</td>
+                                    <td>Show off your fabulous shoulders and draw attention to your proportions with an off-the-shoulder look.</td>
+                                </tr>                               
+                                <tr>
+                                    <td>Sleeveless</td>
+                                    <td>Your arms are gorgeous, so show them off with a sleeveless top or tank top.</td>
+                                </tr>
+                                <tr>
+                                    <td>Fitted</td>
+                                    <td>Pick shirts fitted to your figure that are slimmer at your waistline. 
+                                      Don’t hide your curves!</td>
+                                  </tr> </b>                               
+                              </table>
+                              <br>
+                            
+                        </div>
+
+
+                        <div class="jeans-container w3-round-xxlarge">
+                            <hr class="my-5">
+                                <p class="topic" style="color:white;">JEANS</p>
+                            <hr class="my-3">
+
+                            <p class="p" style="color:white;">
+                              When shopping for women’s jeans, the essential things to consider are defining your shape and getting the right fit. 
+                              The best jeans for an hourglass figure should balance out your form in cooperation with the top you’ve chosen.
+                              <br>
+
+                              Keep it simple and let your body do the talking, remembering your hourglass body shape looks great in pretty much every style of jeans, such as:
+                            </p>
+                            
+                            <img src="images/Hourglass_dress/jeans_600x600.webp" height="600px" width="600px" w3-round-xxlarge>
+                            <br><br>
+                            <table class="ul center" style="color: #ddd;"><b>
+                                <tr>
+                                    <th>Jean Types</th>
+                                    <th>Style Describes</th>
+                                </tr>
+                                <tr>
+                                    <td>High-Waisted</td>
+                                    <td>Since you want to emphasize your waistline, choose high-waisted jeans that accentuate that area rather than low-waisted jeans that sit across your hips.</td>
+                                </tr>
+                                <tr>
+                                    <td>Skinny</td>
+                                    <td>You look amazing in skinny jeans that show off all of your curves.</td>
+                                </tr>
+                                <tr>
+                                    <td>Flared</td>
+                                    <td>Flared jeans also accentuate your body shape and add more, well, flair to your silhouette.</td>
+                                 </tr>
+                                <tr>
+                                    <td>Straight-Leg</td>
+                                    <td>A pair of straight-leg, high-waisted jeans are a classic that flatters your figure.</td>
+                                </tr>
+                                <tr>
+                                    <td>Bootcut</td>
+                                    <td>Another classic, the bootcut also looks excellent, especially when paired with a great pair of boots, as the name would imply.</td>
+                                </tr>
+                                <tr>
+                                    <td>Wide-Leg</td>
+                                    <td>With your waist accentuated, wide-leg jeans can balance out your top and bottom halves.</td>
+                                </tr></b>                               
+                              </table>
+                              <br>
+                        </div>
+
+                        
+                        <div class="pants-container w3-round-xxlarge">
+                            <hr class="my-5">
+                                <p class="topic" style="color:white;">PANTS</p>
+                            <hr class="my-3">
+
+                            <p class="p" style="color:white;">
+                              Jeans don’t work for every occasion, so you’ll need a few pairs of other types of pants in your wardrobe. 
+                              From casual to professional pants, here are some options for your hourglass figure:
+                            </p>
+                            
+                            <img src="images/Hourglass_dress/pants_600x600.webp" height="600px" width="600px" w3-round-xxlarge>
+                            <br><br>
+                            <table class="ul center" style="color: #ddd;"><b>
+                                <tr>
+                                    <th>Pant Types</th>
+                                    <th>Style Describes</th>
+                                </tr>
+                                <tr>
+                                    <td>Belted</td>
+                                    <td>Showing off your waistline is the best way to accentuate your hourglass figure. 
+                                      Chose pants with a wide belt feature that falls at your waist.</td>
+                                </tr>
+                                <tr>
+                                    <td>Wide-Leg</td>
+                                    <td>Pants that hug your hips and fall straight show off your waist when balanced with a great fitted top.</td>
+                                </tr>
+                                <tr>
+                                    <td>Flowy</td>
+                                    <td>Chose flowy fabric bottoms with the drape of a skirt but the convenience of a pair of pants, like palazzo pants.</td>
+                                </tr>
+                                <tr>
+                                  <td>High-Waisted</td>
+                                  <td>It’s never a bad idea to choose a high-waisted pant to help draw attention to your waistline.</td>
+                                </tr>
+                                <tr>
+                                    <td>Stretch</td>
+                                    <td>You can look fabulous in a pair of stretch slacks that hug your body and show off your curves.</td>
+                                </tr></b>                               
+                              </table>
+                              <br>
+                        </div>
+
+
+
+                        <div class="jacket-container w3-round-xxlarge">
+                            <hr class="my-5">
+                                <p class="topic" style="color:white;">JACKETS</p>
+                            <hr class="my-3">
+
+                            <p class="p" style="color:white;">
+                              You can finish off your look with a great jacket or coat for your hourglass body shape. 
+                              When there’s a chill in the air, grab one of these out of your closet:
+                            </p>
+                            
+                            <img src="images/Hourglass_dress/jakets_600x600.webp" height="600px" width="600px" w3-round-xxlarge>
+                            <br><br>
+                            <table class="ul center" style="color: #ddd;"><b>
+                                <tr>
+                                    <th>Jacket Types</th>
+                                    <th>Style Describes</th>
+                                </tr> 
+                                <tr>
+                                    <td>Fitted Leather</td>
+                                    <td>For a casual look, choose a fitted leather coat to show off your wild side.</td>
+                                </tr>
+                                <tr>
+                                    <td>Belted Blazer</td>
+                                    <td>To channel your inner “Devil Wears Prada” in the workplace, choose a belted blazer.</td>
+                                </tr>
+                                <tr>
+                                    <td>Moto</td>
+                                    <td>A fashion-forward look on a classic European leather jacket style looks fantastic with your figure because it’s wider in the shoulders and narrow in the waist.</td>
+                                 </tr>
+                                <tr>
+                                    <td>Cropped</td>
+                                    <td>A cropped jacket that falls just above your waist shows off your fitted-waist outfits.</td>
+                                </tr>
+                                <tr>
+                                    <td>Long-Belted coat</td>
+                                    <td>When it’s cold outside, reach for a long-belted coat that hugs your hips but shows off your waist.</td>
+                                 </tr>
+                                <tr>
+                                    <td>Trench</td>
+                                    <td>You will always look classy in a traditional trench-style coat.</td>
+                                </tr></b>                               
+                              </table>
+                              <br>
+
+                        </div>
+
+
+                        <div class="skirt-container w3-round-xxlarge">
+                            <hr class="my-5">
+                                <p class="topic" style="color:white;">SKIRTS</p>
+                            <hr class="my-3">
+
+                            <p class="p" style="color:white;">
+                              The best skirts for your hourglass figure include a lot of styles, but always keep “structured and classic” in mind when you’re shopping. 
+                              Here are a few suggestions to get you started:
+                            </p>
+                            
+                            <img src="images/Hourglass_dress/skirt_600x600.webp" height="600px" width="600px" w3-round-xxlarge>
+                            <br><br>
+                            <table class="ul center" style="color: #ddd;"><b>
+                                <tr>
+                                    <th>Skirt Types</th>
+                                    <th>Style Describes</th>
+                                </tr>
+                                <tr>
+                                    <td>Pencil</td>
+                                    <td>The classic pencil skirt might be your go-to style. 
+                                      Its hip-hugging form accentuates your natural curves.</td>
+                                </tr>
+                                <tr>
+                                    <td>Belted</td>
+                                    <td>Choose high-waisted skirts with wide belts to bring attention to your waist.</td>
+                                </tr>
+                                <tr>
+                                    <td>Gored</td>
+                                    <td>This dress construction method involves sewing triangle cuts of fabric to create a flared shape. 
+                                      Since they usually fall at your waist rather than your hips, they accentuate your waist and curvy hips simultaneously.</td>
+                                 </tr>
+                                <tr>
+                                    <td>Knee-Iength</td>
+                                    <td>Consider skipping short skirts and choose ones that fall to your knee, as these are often better for showing off curves.</td>
+                                </tr>
+                                <tr>
+                                    <td>Maxi</td>
+                                    <td>You can go longer, though. A maxi skirt looks best when the shape hugs your hips and defines your waist.</td>
+                                 </tr></b>                               
+                              </table>
+                              <br>
+
+                        </div>
+
+
+                        <div class="dress-container w3-round-xxlarge">
+                          <hr class="my-5">
+                              <p class="topic" style="color:white;">DRESS</p>
+                          <hr class="my-3">
+
+                          <p class="p" style="color:white;">
+                            Dresses and many jumpsuits can go from casual to professional to formal, depending on how you style them. 
+                            Choose dresses for your hourglass figure that flatter your shape and make you feel fabulous. Some options are:
+                          </p>
+                          
+                          <img src="images/Hourglass_dress/dress_600x600.webp" height="600px" width="600px" w3-round-xxlarge>
+                          <br><br>
+                          <table class="ul center" style="color: #ddd;"><b>
+                              <tr>
+                                  <th>Dress Types</th>
+                                  <th>Style Describes</th>
+                              </tr> 
+                              <tr>
+                                  <td>Sheath</td>
+                                  <td>A form-fitting sheath dress is designed for your body type and looks impressive at any event.</td>
+                              </tr>
+                              <tr>
+                                  <td>Fit-and-Flare</td>
+                                  <td>The key is always to accentuate your waist, and a fit-and-flare dress is perfect for drawing the line of the garment toward your middle.</td>
+                              </tr>
+                              <tr>
+                                  <td>Wrap</td>
+                                  <td>Wrap dresses that tie across your waist help draw the eye to that area by accentuating your hourglass figure.</td>
+                               </tr>
+                              <tr>
+                                  <td>Paneled Waist</td>
+                                  <td>This dress style gives structure to the dress between the bust and the hips, giving you a tailored look, thanks to their different fabric panels sewn together.</td>
+                              </tr>
+                              <tr>
+                                <td>Bias</td>
+                                <td>Your figure is perfect to pull off a bias-cut dress. 
+                                  This means the dress’s construction uses fabric cut in a diagonal fashion, which allows the fabric to flow and drape.</td>
+                             </tr>
+                              <tr>
+                                <td>Jumpsuits</td>
+                                <td>If you don’t want to wear a dress, jumpsuits in all styles are a perfect option for your body shape. 
+                                  Add a belt to accentuate your waist.</td>
+                               </tr></b>                               
+                            </table>
+                            <br>
+
+                      </div>
+
+                      <div class="swimmer-container w3-round-xxlarge">
+                        <hr class="my-5">
+                            <p class="topic" style="color:white;">SWIMWEAR</p>
+                        <hr class="my-3">
+
+                        <p class="p" style="color:white;">
+                          Finding the perfect swimsuits for hourglass figures is an incredible feeling. 
+                          The right one can make you feel fabulous and confident. 
+                          These swimwear styles show off your figure at the pool or the beach:
+                        </p>
+                        
+                        <img src="images/Hourglass_dress/swimming_600x600.webp" height="600px" width="600px" w3-round-xxlarge>
+                        <br><br>
+                        <table class="ul center" style="color: #ddd;"><b>
+                            <tr>
+                                <th>Dress Types</th>
+                                <th>Style Describes</th>
+                            </tr> 
+                            <tr>
+                                <td>Bold Print Tops</td>
+                                <td>While we recommend solids for other types of clothes, when picking out two-piece suits, don’t be afraid to choose a bold print for the top. 
+                                  The rules that apply to day wear can be thrown out the window on the beach.</td>
+                            </tr>
+                            <tr>
+                                <td>Triangle Tops</td>
+                                <td>A triangle top bikini shows off your skin and your curves.</td>
+                            </tr>
+                            <tr>
+                                <td>High-Rise Bottoms</td>
+                                <td>For your bikini bottoms, choose a high-rise style that frames your waist. 
+                                  Retro styles look great on you.</td>
+                             </tr>
+                            <tr>
+                                <td>Constructed Tops</td>
+                                <td>If you have a full bust, choose a constructed top to support your chest.</td>
+                            </tr>
+                            <tr>
+                              <td>Retro one-Piece</td>
+                              <td>Your classic hourglass figure looks amazing in a retro-style one-piece. 
+                                Channel your inner Marilyn Monroe.</td>
+                           </tr>
+                           <tr>
+                              <td>Halter</td>
+                              <td>A halter top swimsuit, whether it’s a bikini top or the style of a one-piece, flatters your curves and shows off your shoulders.</td>
+                       </tr></b>                               
+                          </table>
+                          <br>
+
+                    </div>
+
+
+                    <div class="shoe-container w3-round-xxlarge">
+                      <hr class="my-5">
+                          <p class="topic" style="color:white;">SHOES AND ACCESSORIES</p>
+                      <hr class="my-3">
+
+                      <p class="p" style="color:white;">
+                        Accessories can perfect the look of any outfit. 
+                        Picking out the right accessories is an art and a science. 
+                        Here are some accessories to consider when piecing together your hourglass body shape outfits:
+                      </p>
+                      
+                      <img src="images/Hourglass_dress/shoes and accessories_600x600.webp" height="600px" width="600px" w3-round-xxlarge>
+                      <br><br>
+                      <table class="ul center" style="color: #ddd;"><b>
+                          <tr>
+                              <th>Shoe and Accessor Types</th>
+                              <th>Style Describes</th>
+                          </tr> 
+                          <tr>
+                              <td>Belts</td>
+                              <td>Belts are your very best accessory. 
+                                If you have a short torso, choose a medium-width belt. 
+                                If you have a longer torso, a wide belt looks terrific.</td>
+                          </tr>
+                          <tr>
+                              <td>Pointed-Toed Shoes</td>
+                              <td>A pointed-toe shoe elongates your leg and plays up your classic figure.</td>
+                          </tr>
+                          <tr>
+                              <td>Classic Nude Pumps</td>
+                              <td>Since you want to draw attention to the center of your body, don’t go over the top with your shoes and choose classic nude pumps.</td>
+                          </tr>
+                          <tr>
+                              <td>Statement Earrings</td>
+                              <td>Bold, statement earrings can give you the pop of style you need and draw attention up to your face.</td>
+                          </tr>
+                          <tr>
+                              <td>Long Necklaces</td>
+                              <td>A long chain that draws the eye down to your waist is a great look.</td>
+                          </tr>
+                           <tr>
+                              <td>Short Necklaces</td>
+                              <td>A simple, short necklace can provide just a pop of detail at your neckline.</td>
+                          </tr></b>                               
+                        </table>
+                        <br>
+
+                  </div>
+
+                      <br><br>
+            </div>            	   
+</div>
+
+
+
+<div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                    <b><p style="padding-right:10px;margin-left:120px;">How Can We Help?</p></b>
+                        <ul>
+                            <li style="color:#264653;margin-left:120px;"><a href="#"><h6>Contact Us</h6></a></li>
+                            <li style="color:#264653;margin-left:120px;" ><a href="#"><h6>Help Center</h6></a></li>
+                            <li style="color:#264653;margin-left:120px;"><a href="#"><h6>Hosting</h6></a></li>
+                            <li style="color:#264653;margin-left:120px;"><a href="#"><h6>Blog</h6></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <b><p style="color:#264653;margin-left:200px;">Account</p></b>
+                        <ul>
+                            <li style="color:#264653;margin-left:200px;"><a href="#"><h6>Login</h6></a></li>
+                            <li style="color:#264653;margin-left:200px;"><a href="#"><h6>Sign Up</h6></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-6 item text">
+                       <b><p style="color:#264653;margin-left:250px;">Contact Us</p></b>
+                        <br>
+                        <p><i><h6><img src="image/homepage/icon/contact.png" alt="House" style="width:5%;padding-right:10px;margin-left:250px;">FitShape@gmail.com</i></h6></p>
+                        <p><i><h6><img src="image/homepage/icon/email.png" alt="House" style="width:5%; padding-right:10px;margin-left:250px;">+94 77 86 93 128</i></h6></p>
+
+                    </div>
+                    <br><br>
+
+                    <div class="social" style="text-align:center;padding-right:10px">
+                    <table style="width:10%;text-align:center;margin-left:480px;">
+                     
+                      <tr>
+                      <a href="#"><i class="icon ion-social-instagram " style="color:#264653; border:20px;padding-right:10px" ></i></a>
+                      <a href="#"><i class="icon ion-social-snapchat"style="color:#264653; border:20px;padding-right:10px" ></i></a>
+                      <a href="#"><i class="icon ion-social-twitter"style="color:#264653; border:20px;padding-right:10px" ></i></a>
+                      <a href="#"><i class="icon ion-social-facebook"style="color:#264653; border:20px;padding-right:10px" ></i></a>
+                      </tr>
+                    </table>
+                </div>
+                <br>                
+                <div>
+                  <p style="color:#264653;font-size:xx-small;margin-top:10px;margin-bottom:-20px;text-align:center;margin-left:475px;">FitShape.lk © 2023</p>
+                </div>
+        </div>
+
+          
+          <br>
+          <div>
+            <p style="color:#264653;font-size:xx-small;text-align:center;">Privacy | Policy Terms of Use | Team | Company</p>
+          </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+</div>
+
+</body>
+
+</html> 
+
+
+
+
+
