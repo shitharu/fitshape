@@ -1,0 +1,895 @@
+<html>
+<head>
+
+    <title>Pear Body Shape</title>
+    <link rel="icon" href="images/logo/logo.PNG">
+
+
+    <link rel="stylesheet" href="css//home_css.css">
+  
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style type="text/css">
+
+
+*{
+ padding: 0px;
+ margin:0px;
+ box-sizing: border-box;
+}
+
+.header{
+  height: 400px;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  margin:0;
+
+  } 
+
+  .navbar {
+      width: 100%;
+      padding: 10px;
+      position: fixed;
+      top: 0px;
+      text-align: center;
+      transition: .5s;
+    }
+
+    .navbar ul li {
+      display: inline-block;
+      padding: 10px 30px;
+      color: black;
+      font-size: 24px;
+      text-decoration: none;
+      font-family: sans-serif;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: .5s;
+    }
+
+
+    .navbar ul li:hover {
+      background: rgb(0, 0, 0);
+
+    }
+
+    .nav-area {
+      float: right;
+      list-style: none;
+    }
+
+    .nav-area li {
+      display: inline-block;
+    }
+
+    .nav-area li a {
+      color: black;
+      text-decoration: none;
+      padding: 5px 5px;
+      font-family: poppins;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+
+    .nav-area li a:hover {
+
+      color: white;
+    }
+
+.logo {
+	float: left;
+}
+.logo img {
+	width: 50px;
+	padding-left: 20px 0;
+}
+
+ .logo {
+	float: left;
+    width: 120px;
+    margin-left: 20px;
+    margin-top:-5px;;
+    }
+.logo img {
+	width: 100%;
+	padding: 15px 0;
+} 
+
+@media (max-width:600px) {
+	.wrapper {
+		width: 100%;
+	}
+	.logo {
+		float: none;
+		width: 50%;
+		text-align: center;
+		margin: auto;
+	}
+	
+	.nav-area {
+		float: none;
+		margin-top: 0;
+	}
+	.nav-area li a {
+		padding: 5px;
+		font-size: 11px;
+	}
+	.nav-area {
+		text-align: center;
+	}
+	.welcome-text {
+		width: 100%;
+		height: auto;
+		margin: 30% 0;
+	}
+	.welcome-text h1 {
+		font-size: 30px;
+	}
+}
+
+.cover{
+  padding: top 50px ;
+  padding-bottom: 50px;
+	-webkit-background-size: cover;
+	background-size: cover;
+  }
+
+
+.footer-dark {
+    padding:50px 0;
+    color:#264653;
+    background:#ddd;
+    background-repeat:no-repeat;
+    
+  }
+  
+  .footer-dark h3 {
+    margin-top:0;
+    margin-bottom:12px;
+    font-weight:bold;
+    font-size:16px;
+  }
+  
+  .footer-dark ul {
+    padding:0;
+    list-style:none;
+    line-height:1.6;
+    font-size:14px;
+    margin-bottom:0;
+  }
+  
+  .footer-dark ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.6;
+  }
+  
+  .footer-dark ul a:hover {
+    opacity:0.8;
+  }
+  
+  @media (max-width:767px) {
+    .footer-dark .item:not(.social) {
+      text-align:center;
+      padding-bottom:20px;
+    }
+  }
+  
+  .footer-dark .item.text {
+    margin-bottom:36px;
+  }
+  
+  @media (max-width:767px) {
+    .footer-dark .item.text {
+      margin-bottom:0;
+    }
+  }
+  
+  .footer-dark .item.text p {
+    opacity:0.6;
+    margin-bottom:0;
+  }
+  
+  .footer-dark .item.social {
+    text-align:center;
+  }
+  
+  @media (max-width:991px) {
+    .footer-dark .item.social {
+      text-align:center;
+      margin-top:20px;
+    }
+  }
+  
+  .footer-dark .item.social > a {
+    font-size:20px;
+    width:36px;
+    height:36px;
+    line-height:36px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+    margin:0 8px;
+    color:#264653;
+    opacity:0.75;
+  }
+  
+  .footer-dark .item.social > a:hover {
+    opacity:0.9;
+  }
+  
+  .footer-dark .copyright {
+    text-align:center;
+    padding-top:24px;
+    opacity:0.3;
+    font-size:13px;
+    margin-bottom:0;
+  }
+
+ .background1
+  {
+    background-image: url('https://i.pinimg.com/originals/8d/29/11/8d291189ea4144be3c5eb5a015559c8e.jpg');
+    width: 100%; 
+    margin-top:130px; 
+  
+  }
+
+  .ul{
+    padding-left: 70px;
+    padding-right: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: left;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 140%;
+  }
+
+  .topic{
+    font-size: 40px;
+    font-style: bold;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .p{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 140%;
+  }
+
+  .top-container{
+    background-color:rgb(150, 47, 110);
+     
+  }
+
+  .jeans-container{
+    background-color:rgb(18, 13, 94);  
+  }
+
+  .pants-container{
+    background-color:rgb(26, 90, 119);  
+  }
+
+  .jacket-container{
+    background-color:rgb(143, 50, 89);  
+  }
+
+  .skirt-container{
+    background-color:rgb(179, 93, 219);  
+  }
+  
+  .dress-container{
+    background-color:rgb(90, 11, 97);  
+  }
+
+  .swimmer-container{
+    background-color:rgb(184, 58, 8);  
+  }
+
+  .shoe-container{
+    background-color:rgb(5, 97, 17);  
+  }
+
+  
+
+  table, th, td {
+    padding-left: 120px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: justify;
+    border: 1px solid;
+    
+    }
+
+    .center {
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    .h1{
+      padding-top: 100px;
+    }
+
+    .p2{
+    
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 140%;
+  }
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header" style="margin-top: 0;">
+
+<div class="background"style="margin-top:0px;">
+<img src="https://wallpaperset.com/w/full/3/7/3/83509.jpg" width="100%;margin-top:130px;"">
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
+    <div class="container">
+
+        <header>
+            <div class="navbar" id='nav'>
+                <div class="logo">
+                    <img src="images/logo/logo.PNG" alt="" style="margin-left:-200px;">
+                </div>
+                <ul class="nav-area">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="About Us.html">About Us</a></li>
+                    <li><a href="x.html">Login</a></li>
+                    <li><a href="x.html">Body Shape Analyzer</a></li>
+                    <li style="margin-right:120px;"><a href="x.html">XXXX</a></li>
+                    </ul>
+            </div>  
+        </header>     
+    </div>
+</nav>
+</div>
+</div>
+
+  <script type="text/javascript">
+     
+    var  nav = document.getElementById('nav');
+    
+        window.onscroll = function(){
+
+        if (window.pageYOffset >100) {
+
+            nav.style.background = "white";
+            nav.style.boxShadow = "0px 2px 2px white";
+            nav.style.height="80px";
+            nav.style.paddingTop="15px";
+            nav.style.opacity=".7";
+        }
+        else{
+        nav.style.background = "transparent";
+            nav.style.boxShadow = "none";
+        }
+        }
+
+    </script> 
+
+
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <script type="text/javascript">
+     var nav = document.querySelector('nav');
+
+     window.addEventListener('scroll', function () {
+       if (window.pageYOffset > 100) {
+        nav.style.background = "white";
+        nav.style.boxShadow = "0px 2px 2px white";
+        nav.style.height="80px";
+        nav.style.paddingTop="15px";
+        nav.style.opacity=".7";
+       } else {
+         nav.classList.remove('bg-dark', 'shadow');
+       }
+     });
+   </script>     
+
+</div>
+	
+
+<div class="background1">
+  
+            <div class="col-lg-10 mx-auto text-center margin-left:5px; margin-right:50px;">
+                <h1 style="font-family:'Trajan Pro'; color:#000000; margin-top:-400px;">
+                    
+
+                  <b>PEAR BODY SHAPE</b></h1>    
+
+                  <br><br><br>  
+
+                    <h2 align="left">CHARACTERISTICS OF <br> A PEAR BODY SHAPE</h2><br>
+                    
+                    <ul class="p2" align="left">
+                      <li>Your hips, butt, and thighs are fuller than your bust and shoulders.</li>
+                      <li>Your waist is well-defined, especially in proportion to your hips.</li>
+                      <li>You may have a short torso, but pears can have a longer torso too.</li>
+                    </ul>
+
+                    <br><br>  <br><br>   
+
+                  <h2 align="left">
+                    HERE ARE SOME TIPS AND TRICKS TO KEEP IN MIND NEXT TIME YOU ADD TO YOUR WARDROBE:
+                  </h2>
+
+                      
+                    <h4 class="mb-1" style="font-family: 'Tekton Pro';">
+   
+                        <div class="top-container w3-round-xxlarge">
+                            <hr class="my-5">
+                                <p class="topic" style="color:white;">TOPS</p>
+                            <hr class="my-3">
+                                <p class="p" style="color:white;">
+                                  When shopping for tops for a pear shape body, there are two golden rules to keep in mind: 
+                                  <br>1) accentuate your shoulders and bust and 
+                                      2) cinch your waist. The most flattering tops and blouses for pears include:
+                                </p>
+                            <img src="images/Pear_dress/tos_600x600.webp" height="600px" width="600px" w3-round-xxlarge>
+                            <br><br>
+                            <table class="ul center" style="color: #ddd;"><b>
+                                <tr>
+                                    <th>Top Types</th>
+                                    <th>Style Describes</th>
+                                </tr>
+                                <tr>
+                                    <td>Peplum</td>
+                                    <td>These adorable tops, sometimes called "baby doll" tops, feature a gathered waistline with a flair at the bottom. 
+                                      This style accentuates your natural waist beautifully.</td>
+                                </tr>
+                                <tr>
+                                    <td>Cowl Neck</td>
+                                    <td>Continuing to draw attention to your face and upper body, a cowl neck drapes nicely and adds visual interest.</td>
+                                </tr>
+                                <tr>
+                                    <td>Square Neck</td>
+                                    <td>Square neck tops show off your shoulder blades and sit low across your neck and shoulders.</td>
+                                 </tr>
+                                <tr>
+                                    <td>Boat Neck</td>
+                                    <td>Similarly, a boat neck widens your shoulders to give the illusion of a more balanced shape.</td>
+                                </tr>                               
+                                <tr>
+                                    <td>Belted</td>
+                                    <td>Belted tops show off your already well-defined waist and help create balance.</td>
+                                  </tr> </b>                               
+                              </table>
+                              <br>
+                            
+                        </div>
+
+
+                        <div class="jeans-container w3-round-xxlarge">
+                            <hr class="my-5">
+                                <p class="topic" style="color:white;">JEANS</p>
+                            <hr class="my-3">
+
+                            <p class="p" style="color:white;">
+                              When shopping for women's denim for a pear body shape, looser-fitting cuts and dark washes can help flatter your curvy figure.  
+                            </p>
+                            
+                            <img src="images/Pear_dress/jeans_600x600.webp" height="600px" width="600px" w3-round-xxlarge>
+                            <br><br>
+                            <table class="ul center" style="color: #ddd;"><b>
+                                <tr>
+                                    <th>Jean Types</th>
+                                    <th>Style Describes</th>
+                                </tr>
+                                <tr>
+                                    <td>Straight-Leg</td>
+                                    <td>Skinny jeans draw attention down, but you can keep your bottom half neutral with straight-leg jeans. 
+                                      Love skinny jeans? Try a slim-straight option, which is roomier in the thighs than traditional skinny jeans.</td>
+                                </tr>
+                                <tr>
+                                    <td>Bootcut</td>
+                                    <td>Bootcut jeans are a pear’s best friend as the slight curve at the ankles balances out your hips, butt, and thighs. 
+                                      Try pairing for favorite bootcut jeans with a pair of chic booties to elongate your legs.</td>
+                                </tr>
+                                <tr>
+                                    <td>Wide-Leg</td>
+                                    <td>Wide-leg jeans, like straight-leg, will create a straighter silhouette, giving your hips, butt, and thighs a more uniform look.</td>
+                                 </tr>
+                                <tr>
+                                    <td>Flare</td>
+                                    <td>Flares may seem like a no-no, but with the right top, flare jeans can showcase the balance in your figure and draw the eyes away from your hips, butt, and thighs.</td>
+                                </tr>
+                                <tr>
+                                    <td>High-Waisted</td>
+                                    <td>Triangle body shapes look terrific in high-waisted jeans that accentuate your natural waistline.</td>
+                                </tr>
+                                <tr>
+                                    <td>Dark Washes</td>
+                                    <td>When you want to downplay your bottom half, choose dark washes, like classic black or indigo, and pair with a bright, fun top or a playful accessory.</td>
+                                </tr></b>                               
+                              </table>
+                              <br>
+                        </div>
+
+                        
+                        <div class="pants-container w3-round-xxlarge">
+                            <hr class="my-5">
+                                <p class="topic" style="color:white;">PANTS</p>
+                            <hr class="my-3">
+
+                            <p class="p" style="color:white;">
+                              No pear’s wardrobe is complete without a few pairs of well-fitting dress and casual pants. 
+                              Here are some great pants for your pear-shaped body.
+                            </p>
+                            
+                            <img src="images/Pear_dress/pants_600x600.webp" height="600px" width="600px" w3-round-xxlarge>
+                            <br><br>
+                            <table class="ul center" style="color: #ddd;"><b>
+                                <tr>
+                                    <th>Pant Types</th>
+                                    <th>Style Describes</th>
+                                </tr>
+                                <tr>
+                                    <td>Bootcut</td>
+                                    <td>To draw attention to your upper body, choose bootcut pants rather than ultra-thin cuts.</td>
+                                </tr>
+                                <tr>
+                                    <td>Flat-Front</td>
+                                    <td>Opting for flat-front pants instead of pleated pants will sit well across your hips and thighs to create a balanced silhouette.</td>
+                                </tr>
+                                <tr>
+                                    <td>High-Waisted</td>
+                                    <td>Showcasing your natural waist to give you a balanced shape is accented with high-waisted trousers.</td>
+                                </tr>
+                                <tr>
+                                  <td>Straight Leg</td>
+                                  <td>You can also look great in a pair of straight-legged pants that create a neutral shape to elongate your legs.</td>
+                                </tr>
+                                <tr>
+                                  <td>Dark Colors</td>
+                                  <td>As with jeans, choose darker colors for your work wardrobe pants to bring the eye naturally up to your face, neckline, and shoulders.</td>
+                                </tr></b>                               
+                              </table>
+                              <br>
+                        </div>
+
+
+
+                        <div class="jacket-container w3-round-xxlarge">
+                            <hr class="my-5">
+                                <p class="topic" style="color:white;">JACKETS</p>
+                            <hr class="my-3">
+
+                            <p class="p" style="color:white;">
+                              Accessorizing your look in the cooler seasons with jackets and coats can also give you a great shape. 
+                            </p>
+                            
+                            <img src="images/Pear_dress/jackets_600x600.webp" height="600px" width="600px" w3-round-xxlarge>
+                            <br><br>
+                            <table class="ul center" style="color: #ddd;"><b>
+                                <tr>
+                                    <th>Jacket Types</th>
+                                    <th>Style Describes</th>
+                                </tr> 
+                                <tr>
+                                    <td>Cropped</td>
+                                    <td>To accentuate your upper half, a cropped jacket is a perfect look over any outfit.</td>
+                                </tr>
+                                <tr>
+                                    <td>Denim or Bomberr</td>
+                                    <td>You can pull off some great looks with denim or bomber jackets. 
+                                      Keep the hem at your natural waist to accentuate your shape.</td>
+                                </tr>
+                                <tr>
+                                    <td>Long Blazer</td>
+                                    <td>For the office, choose a long blazer that falls below your hips to show off your shape and elongate your torso.</td>
+                                 </tr>
+                                <tr>
+                                    <td>Trench Coat</td>
+                                    <td>For outerwear, a trench coat with a belt to cinch at your natural waist is the perfect fit.</td>
+                                </tr>
+                                <tr>
+                                    <td>A-Line Coat</td>
+                                    <td>Like choosing dresses, A-line coats are an excellent fit for the triangle body shape.</td>
+                                 </tr>
+                                <tr>
+                                    <td>Princess Coat</td>
+                                    <td>This retro style of coat is named for the seams that run along each side of the bustline, and it's perfectly designed for a pear body shape.</td>
+                                </tr></b>                               
+                              </table>
+                              <br>
+
+                        </div>
+
+
+                        <div class="skirt-container w3-round-xxlarge">
+                            <hr class="my-5">
+                                <p class="topic" style="color:white;">SKIRTS</p>
+                            <hr class="my-3">
+
+                            <p class="p" style="color:white;">
+                              Like dresses, you also want the best skirts for pear-shaped bodies in your wardrobe to show off your naturally curvy figure.
+                            </p>
+                            
+                            <img src="images/Pear_dress/skirt_600x600.webp" height="600px" width="600px" w3-round-xxlarge>
+                            <br><br>
+                            <table class="ul center" style="color: #ddd;"><b>
+                                <tr>
+                                    <th>Skirt Types</th>
+                                    <th>Style Describes</th>
+                                </tr>
+                                <tr>
+                                    <td>Full</td>
+                                    <td>Like the dress choices you make, pairing a full skirt with a fitted top will give you the right silhouette.</td>
+                                </tr>
+                                <tr>
+                                    <td>A-Line</td>
+                                    <td>An A-line skirt will also create the right shape as it flares away from your hips, balancing out your form.</td>
+                                </tr>
+                                <tr>
+                                    <td>Skimming</td>
+                                    <td>Choose skirts that skim your hips rather than tightly fitted skirts.</td>
+                                 </tr>
+                                <tr>
+                                    <td>Draped Fabric</td>
+                                    <td>Loose, draping fabrics that won't cling to your hips or thighs will help accentuate your shape and draw attention upward.</td>
+                                </tr>
+                                <tr>
+                                    <td>Knee-Length or Mid-Calf</td>
+                                    <td>Choose skirts that fall to the knee or mid-calf to elongate your shape and legs.</td>
+                               </tr>
+                                <tr>
+                                    <td>High-Waisted</td>
+                                    <td>High-waisted skirts to accentuate your natural waistline will look fabulous with a fitted top.</td>
+                                 </tr></b>                               
+                              </table>
+                              <br>
+
+                        </div>
+
+
+                        <div class="dress-container w3-round-xxlarge">
+                          <hr class="my-5">
+                              <p class="topic" style="color:white;">DRESS</p>
+                          <hr class="my-3">
+
+                          <p class="p" style="color:white;">
+                            For essential dresses for your pear shape body, consider these styles to help you accentuate your best features. 
+                            Use these concepts to pick out a good jumpsuit, too.
+                          </p>
+                          
+                          <img src="images/Pear_dress/dress_600x600.webp" height="600px" width="600px" w3-round-xxlarge>
+                          <br><br>
+                          <table class="ul center" style="color: #ddd;"><b>
+                              <tr>
+                                  <th>Dress Types</th>
+                                  <th>Style Describes</th>
+                              </tr> 
+                              <tr>
+                                  <td>Fit and Flare</td>
+                                  <td>With a defined waist and full skirt, fit and flare dresses are perfect for the pear body shape.</td>
+                              </tr>
+                              <tr>
+                                  <td>A-Line</td>
+                                  <td>Like fit and flare, A-line dresses will also have a fuller skirt that lifts the fabric from the hips.</td>
+                              </tr>
+                              <tr>
+                                  <td>Empire Waist</td>
+                                  <td>You may also want to consider an empire waist dress that's gathered just below your bust, especially when choosing a long gown.</td>
+                               </tr>
+                              <tr>
+                                  <td>Off the Shoulder</td>
+                                  <td>Dresses with an off-the-shoulder design are a great way to accentuate your shoulders and collarbones to draw attention up.</td>
+                              </tr>
+                              <tr>
+                                  <td>Belted</td>
+                                  <td>Belts at your natural waist help give your body the illusion of a more balanced, hourglass shape.</td>
+                               </tr></b>                               
+                            </table>
+                            <br>
+
+                      </div>
+
+                      <div class="swimmer-container w3-round-xxlarge">
+                        <hr class="my-5">
+                            <p class="topic" style="color:white;">SWIMWEAR</p>
+                        <hr class="my-3">
+
+                        <p class="p" style="color:white;">
+                          Is the beach, lake, or pool calling your name? 
+                          Choosing the right swimwear along with summer clothes for your pear-shaped body can make you feel confident when you’re ready to take a dip.
+                        </p>
+                        
+                        <img src="images/Pear_dress/swimming_600x600.webp" height="600px" width="419px" w3-round-xxlarge>
+                        <br><br>
+                        <table class="ul center" style="color: #ddd;"><b>
+                            <tr>
+                                <th>Dress Types</th>
+                                <th>Style Describes</th>
+                            </tr> 
+                            <tr>
+                                <td>Ruched Tops</td>
+                                <td>The pleated, ruched detailing on the upper half of a swimsuit will draw the eye upward.</td>
+                            </tr>
+                            <tr>
+                                <td>Ruffle Details</td>
+                                <td>Choose ruffles along the neckline to create visual interest.</td>
+                            </tr>
+                            <tr>
+                                <td>Asymmetrical</td>
+                                <td>A one-shoulder top or an asymmetrical hemline to a swim dress looks great on a pear body shape.</td>
+                             </tr>
+                            <tr>
+                                <td>High-Waisted Bottoms</td>
+                                <td>When choosing separates, pick out high-waisted swim bottoms to show off your natural waist.</td>
+                            </tr>
+                            <tr>
+                              <td>Tankinis</td>
+                              <td>Tankinis with fit and flare tops, like peplum tops, will accentuate all your right curves.</td>
+                           </tr>
+                           <tr>
+                              <td>Off-the-Shoulder</td>
+                              <td>Drawing the eye up with an off-the-shoulder swimsuit design will show off your collarbones.</td>
+                         </tr>
+                         <tr>
+                              <td>Halter</td>
+                              <td>A halter top is another way to display your shoulders and create an elongated shape for your bustline.</td>
+                       </tr></b>                               
+                          </table>
+                          <br>
+
+                    </div>
+
+
+                    <div class="shoe-container w3-round-xxlarge">
+                      <hr class="my-5">
+                          <p class="topic" style="color:white;">SHOES AND ACCESSORIES</p>
+                      <hr class="my-3">
+
+                      <p class="p" style="color:white;">
+                        Shoes and accessories can also help accentuate your fabulous pear body shape. 
+                        Whether you're dressing casual, formal, or for the office, try out these options.
+                      </p>
+                      
+                      <img src="images/Pear_dress/shoes and accessories_600x600.webp" height="600px" width="600px" w3-round-xxlarge>
+                      <br><br>
+                      <table class="ul center" style="color: #ddd;"><b>
+                          <tr>
+                              <th>Shoe and Accessor Types</th>
+                              <th>Style Describes</th>
+                          </tr> 
+                        <tr>
+                              <td>Pointed-Toe Shoes</td>
+                              <td>To elongate your legs, choose a pointed-toe shoe. They draw the length of the leg downward.</td>
+                          </tr>
+                          <tr>
+                              <td>Booties</td>
+                              <td>Booties, especially when paired with boot-cut jeans or slacks, are a great shoe choice.</td>
+                          </tr>
+                          <tr>
+                              <td>Drop Earrings</td>
+                              <td>You want to show off your neckline and shoulders, and drop earrings can help point the eye in the right direction.</td>
+                          </tr>
+                           <tr>
+                              <td>Bold Necklace</td>
+                              <td>Similarly, a bold necklace will also help draw attention to the neckline, shoulders, and bust area.</td>
+                          </tr>
+                          <tr>
+                              <td>Belts</td>
+                              <td>You have a great waistline, so show it off by cinching with a belt at your natural waist.</td>
+                          </tr></b>                               
+                        </table>
+                        <br>
+
+                  </div>
+
+                      <br><br>
+            </div>            	   
+</div>
+
+
+
+<div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                    <b><p style="padding-right:10px;margin-left:120px;">How Can We Help?</p></b>
+                        <ul>
+                            <li style="color:#264653;margin-left:120px;"><a href="#"><h6>Contact Us</h6></a></li>
+                            <li style="color:#264653;margin-left:120px;" ><a href="#"><h6>Help Center</h6></a></li>
+                            <li style="color:#264653;margin-left:120px;"><a href="#"><h6>Hosting</h6></a></li>
+                            <li style="color:#264653;margin-left:120px;"><a href="#"><h6>Blog</h6></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <b><p style="color:#264653;margin-left:200px;">Account</p></b>
+                        <ul>
+                            <li style="color:#264653;margin-left:200px;"><a href="#"><h6>Login</h6></a></li>
+                            <li style="color:#264653;margin-left:200px;"><a href="#"><h6>Sign Up</h6></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-6 item text">
+                       <b><p style="color:#264653;margin-left:250px;">Contact Us</p></b>
+                        <br>
+                        <p><i><h6><img src="image/homepage/icon/contact.png" alt="House" style="width:5%;padding-right:10px;margin-left:250px;">FitShape@gmail.com</i></h6></p>
+                        <p><i><h6><img src="image/homepage/icon/email.png" alt="House" style="width:5%; padding-right:10px;margin-left:250px;">+94 77 86 93 128</i></h6></p>
+
+                    </div>
+                    <br><br>
+
+                    <div class="social" style="text-align:center;padding-right:10px">
+                    <table style="width:10%;text-align:center;margin-left:480px;">
+                     
+                      <tr>
+                      <a href="#"><i class="icon ion-social-instagram " style="color:#264653; border:20px;padding-right:10px" ></i></a>
+                      <a href="#"><i class="icon ion-social-snapchat"style="color:#264653; border:20px;padding-right:10px" ></i></a>
+                      <a href="#"><i class="icon ion-social-twitter"style="color:#264653; border:20px;padding-right:10px" ></i></a>
+                      <a href="#"><i class="icon ion-social-facebook"style="color:#264653; border:20px;padding-right:10px" ></i></a>
+                      </tr>
+                    </table>
+                </div>
+                <br>                
+                <div>
+                  <p style="color:#264653;font-size:xx-small;margin-top:10px;margin-bottom:-20px;text-align:center;margin-left:475px;">FitShape.lk © 2023</p>
+                </div>
+        </div>
+
+          
+          <br>
+          <div>
+            <p style="color:#264653;font-size:xx-small;text-align:center;">Privacy | Policy Terms of Use | Team | Company</p>
+          </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+</div>
+
+</body>
+
+</html> 
+
+
+
+
+
