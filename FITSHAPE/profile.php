@@ -501,7 +501,7 @@ textarea:focus, input:focus{
 
 <body>
 
-<h2><img src="images/logo/logo.png" width="70"height="65" style="float:right; margin-right:50px;margin-top:-10px">ADMIN DASHBOARD</h2>
+<h2><img src="images/logo/logo.png" width="70"height="65" style="float:right; margin-right:50px;margin-top:-10px">USER DASHBOARD</h2>
 
 <ul class="ul" >
 <li class="li" style="padding-right: 50px;"><a href="Home.html">Home</a></li>

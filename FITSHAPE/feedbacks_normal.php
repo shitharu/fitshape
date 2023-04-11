@@ -32,9 +32,8 @@ $name = ""; $feedback = ""; $mood = "";
 
                     echo "<script>alert('Your details inserted!.')</script>";
 					
-					header("location: viewallfeedbacksuser.php");
+					header("location: allfeedbacks.php");
 					
-
                 }else{
 
                    echo "<script>alert('Your details not inserted.Try Again.')</script>";
@@ -69,8 +68,8 @@ $name = ""; $feedback = ""; $mood = "";
 	<div class="registration-box">
     
         <h2 style="text-align:center;">Feedback Form</h2>
-            <a href="viewallfeedbacksuser.php">
-                <button class="btn btn-primary btn-lg" style="width:360px">View All Feedbacks</button>
+            <a href="allfeedbacks.php">
+                <button class="btn btn-primary btn-lg" style="width:360px"">View All Feedbacks</button>
             </a><br><br>
         
 		<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data">

@@ -26,7 +26,7 @@
 				<input type="password" name="password" required="">
 				<label>Password</label>
 			</div>
-			<input type="submit" name="submit" value="Login" style="width:360px">
+			<input type="submit" name="submit" value="Login" lass="btn btn-primary btn-lg" style="width:360px">
 
 			<br><br><br><br>
 

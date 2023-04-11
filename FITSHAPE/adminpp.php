@@ -1,12 +1,23 @@
-<?php 
-
+<?php
 session_start();
-
-if (!isset($_SESSION['email'])) {
-    header("Location: LoginPage.php");
+ 
+// Redirect to the login page if the user is not logged in
+if (!isset($_SESSION['username'])) {
+  header('Location: login.php');
+  exit;
 }
 
+
+$db = new mysqli('localhost', 'root', '', 'fitshape');
+
+// Retrieve the user's details from the database
+$username = $_SESSION['username'];
+$query = "SELECT * FROM admin_login WHERE username = '$username'";
+$result = $db->query($query);
+$row = $result->fetch_assoc();
 ?>
+ 
+
 
 <html>
 
@@ -18,8 +29,8 @@ if (!isset($_SESSION['email'])) {
 
 body {
   font-family: "Lato", sans-serif;
-  height: 100%;
-  width: 100%;
+  background-size:cover;
+  background-image: url("https://images.pexels.com/photos/370799/pexels-photo-370799.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 }
 
 .sidenav {
@@ -378,7 +389,7 @@ input[type=submit]:hover {
 		overflow-y: auto;
 		height: 570px;
 		width:97%;
-        margin-left:10px;
+       margin-left:10px;
 }
 
 .tableFixHead thead th {
@@ -493,9 +504,9 @@ textarea:focus, input:focus{
 <ul class="ul" >
 <li class="li"><a href="Home.html" style="padding-right: 50px;">Home</a></li>
 <li class="li"><a href="About Us.html">About Us</a></li>
-<li class="li"><a href="index.php">Login</a></li>
+<li class="li"><a href="indexadmin.php">Login</a></li>
 <li class="li"><a href="x.php">Body Shape Analyzer</a></li>
-<li class="li"><a class="active" href="viewallfeedbacks.php">Feedbacks</a></li>
+<li class="li"><a href="viewallfeedbacks.php">Feedbacks</a></li>
 
 </ul>
 
@@ -506,11 +517,17 @@ textarea:focus, input:focus{
 
 <br><br>
     <ul>
-          <li><a href="adminprofile.php">Admin Dashboard</a></li>
+          <li><a href="blankadmin.php">Admin Dashboard</a></li>
+          <li><a class="active" href="adminpp.php">Admin Profile</a></li>
+          <li><a href="registeradmin.php">Add an Admin</a></li>
+          <li><a href="adminprofile.php">View All Admins</a></li>
+          
+          <br><br><br><br>
+
           <li><a href="add_user.php">Add User</a></li>
           <li><a href="viewallusers.php">View All Users</a></li>
           <li><a href="searchuser.php">Search User</a></li>
-          <li><a class="active" href="viewallfeedbacks.php">View Feedback</a></li>
+          
     </ul>
   </div>
 </div>
@@ -530,45 +547,44 @@ if (!$con) {
     
 ?>
 
-     <?php
-            $sql="SELECT * FROM feedbacks";
-            $result = mysqli_query($con,$sql);
-     ?>
-
 <br>
+
 
 <div class="tableFixHead">
 <table class="table1" id="myTable" style="margin-left:20%;width:80%;" >
-	<thead>
-<tr style="background-color:#caf0f8;height:70px;">
-	<th>ID</th>
-    <th>Name</th>
-    <th>Feedback</th>
-    <th>Mood</th>
 
-	</tr>
-	</thead>
-	<tbody>	
-		<?php
-			if ($result->num_rows > 0) {
-				
-				while ($row = $result->fetch_assoc()) {
-		?>
+    <tr style="background-color:#caf0f8;height:70px;">
+      <th>Username</th>
+      <td><?php echo $row['username']; ?></td>
+    </tr>
 
-					<tr style="background-color:#caf0f8">
-					<td class="td"><?php echo $row['id']; ?></td>
-					<td class="td"><?php echo $row['name']; ?></td>
-					<td class="td"><?php echo $row['feedback']; ?></td>
-                    <td class="td"><?php echo $row['mood']; ?></td>
-					</tr>	
-                
-		<?php		}
-			}
-		?>
-	        	
-	</tbody>
+    <tr style="background-color:#caf0f8;height:70px;">
+      <th>Name</th>
+      <td><?php echo $row['name']; ?></td>
+    </tr>
+
+    <tr style="background-color:#caf0f8;height:70px;">
+      <th>Contact Number</th>
+      <td><?php echo $row['telno']; ?></td>
+    </tr>
+
+    <tr style="background-color:#caf0f8;height:70px;">
+      <th>Email</th>
+      <td><?php echo $row['email']; ?></td>
+    </tr>
+
+    <tr style="background-color:#457b9d;height:200px;">
+      <th></th>
+      <td>
+        
+      </td>
+    </tr>
+
 </table>
 	</div>
+
+
+
 
 
 </body>

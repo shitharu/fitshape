@@ -63,6 +63,16 @@ $name = ""; $email = ""; $telno=""; $username = "";
 <head>
 	<title>Admin Registration Page</title>
 	<link rel="stylesheet" type="text/css" href="registercss.css">
+
+	<style>
+
+body {
+  font-family: "Lato", sans-serif;
+  background-size:cover;
+  background-image: url("https://images.pexels.com/photos/370799/pexels-photo-370799.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+
+</style>
 </head>
 <body>
 	<div class="registration-box">

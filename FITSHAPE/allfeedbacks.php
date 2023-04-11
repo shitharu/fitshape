@@ -1,17 +1,7 @@
-<?php 
-
-session_start();
-
-if (!isset($_SESSION['email'])) {
-    header("Location: LoginPage.php");
-}
-
-?>
-
 <html>
 
 <head>
-    <title>View All Feedbacks</title>
+    <title>All Feedbacks</title>
     <link rel="icon" href="images/logo/logo.png">
 
 <style>
@@ -488,14 +478,13 @@ textarea:focus, input:focus{
 
 <body>
 
-<h2><img src="images/logo/logo.png" width="70"height="65" style="float:right; margin-right:50px;margin-top:-10px">ADMIN DASHBOARD</h2>
+<h2><img src="images/logo/logo.png" width="70"height="65" style="float:right; margin-right:50px;margin-top:-10px">FEEDBACKS</h2>
 
 <ul class="ul" >
 <li class="li"><a href="Home.html" style="padding-right: 50px;">Home</a></li>
 <li class="li"><a href="About Us.html">About Us</a></li>
 <li class="li"><a href="index.php">Login</a></li>
-<li class="li"><a href="x.php">Body Shape Analyzer</a></li>
-<li class="li"><a class="active" href="viewallfeedbacks.php">Feedbacks</a></li>
+<li class="li"><a href="allfeedbacks.php">Feedbacks</a></li>
 
 </ul>
 
@@ -506,11 +495,8 @@ textarea:focus, input:focus{
 
 <br><br>
     <ul>
-          <li><a href="adminprofile.php">Admin Dashboard</a></li>
-          <li><a href="add_user.php">Add User</a></li>
-          <li><a href="viewallusers.php">View All Users</a></li>
-          <li><a href="searchuser.php">Search User</a></li>
-          <li><a class="active" href="viewallfeedbacks.php">View Feedback</a></li>
+          <li><a class="active" href="allfeedbacks.php">View All Feedbacks</a></li>
+          <li><a href="feedbacks_normal.php">Add Feedbaack</a></li>
     </ul>
   </div>
 </div>

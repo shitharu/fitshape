@@ -8,8 +8,8 @@
 
 body {
   font-family: "Lato", sans-serif;
-  height: 100%;
-  width: 100%;
+  background-size:cover;
+  background-image: url("https://images.pexels.com/photos/370799/pexels-photo-370799.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 }
 
 .sidenav {
@@ -478,9 +478,9 @@ textarea:focus, input:focus{
 <ul class="ul" >
 <li class="li"><a href="Home.html" style="padding-right: 50px;">Home</a></li>
 <li class="li"><a href="About Us.html">About Us</a></li>
-<li class="li"><a href="index.php">Login</a></li>
+<li class="li"><a href="indexadmin.php">Login</a></li>
 <li class="li"><a href="x.php">Body Shape Analyzer</a></li>
-<li class="li"><a href="feedbacks.php">Feedbacks</a></li>
+<li class="li"><a href="viewallfeedbacks.php">Feedbacks</a></li>
 
 </ul>
 
@@ -491,11 +491,17 @@ textarea:focus, input:focus{
 
 <br><br>
     <ul>
-          <li><a href="adminprofile.php">Admin Dashboard</a></li>
-          <li><a href="x.php">Add User</a></li>
+          <li><a href="blankadmin.php">Admin Dashboard</a></li>
+          <li><a href="adminpp.php">Admin Profile</a></li>
+          <li><a href="registeradmin.php">Add an Admin</a></li>
+          <li><a href="adminprofile.php">View All Admins</a></li>
+          
+          <br><br><br><br>
+
+          <li><a href="add_user.php">Add User</a></li>
           <li><a class="active" href="viewallusers.php">View All Users</a></li>
-          <li><a href="x.php">Search User</a></li>
-          <li><a href="viewallfeedbacks.php">View Feedback</a></li>
+          <li><a href="searchuser.php">Search User</a></li>
+          
     </ul>
   </div>
 </div>
@@ -552,7 +558,7 @@ if (!$con) {
 
 					<tr style="background-color:#caf0f8">
                         <td class="td"><?php echo $row['username']; ?></td>
-                        <td class="td"><?php echo $row['email']; ?></td>
+                        <td class="td"><?php echo $row['email'];?></td>
                         <td class="td"><?php echo $row['age']; ?></td>
 
                         <td> 
@@ -569,9 +575,11 @@ if (!$con) {
                         <td class="td"><?php echo $row['weight']; ?></td>
                         <td class="td"><?php echo $row['height']; ?></td>
                         <td class="td"><?php echo $row['body_shape']; ?></td>
+                        
 					</tr>	
                 
 		<?php		}
+    
 			}
 		?>
 	        	

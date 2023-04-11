@@ -1,25 +1,15 @@
-<?php 
-
-session_start();
-
-if (!isset($_SESSION['email'])) {
-    header("Location: LoginPage.php");
-}
-
-?>
-
 <html>
 
 <head>
-    <title>View All Feedbacks</title>
+    <title>Search User</title>
     <link rel="icon" href="images/logo/logo.png">
 
 <style>
 
 body {
   font-family: "Lato", sans-serif;
-  height: 100%;
-  width: 100%;
+  background-size:cover;
+  background-image: url("https://images.pexels.com/photos/370799/pexels-photo-370799.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 }
 
 .sidenav {
@@ -378,7 +368,7 @@ input[type=submit]:hover {
 		overflow-y: auto;
 		height: 570px;
 		width:97%;
-        margin-left:10px;
+       margin-left:10px;
 }
 
 .tableFixHead thead th {
@@ -493,9 +483,9 @@ textarea:focus, input:focus{
 <ul class="ul" >
 <li class="li"><a href="Home.html" style="padding-right: 50px;">Home</a></li>
 <li class="li"><a href="About Us.html">About Us</a></li>
-<li class="li"><a href="index.php">Login</a></li>
+<li class="li"><a href="indexadmin.php">Login</a></li>
 <li class="li"><a href="x.php">Body Shape Analyzer</a></li>
-<li class="li"><a class="active" href="viewallfeedbacks.php">Feedbacks</a></li>
+<li class="li"><a href="viewallfeedbacks.php">Feedbacks</a></li>
 
 </ul>
 
@@ -506,11 +496,17 @@ textarea:focus, input:focus{
 
 <br><br>
     <ul>
-          <li><a href="adminprofile.php">Admin Dashboard</a></li>
+          <li><a href="blankadmin.php">Admin Dashboard</a></li>
+          <li><a href="adminpp.php">Admin Profile</a></li>
+          <li><a href="registeradmin.php">Add an Admin</a></li>
+          <li><a href="adminprofile.php">View All Admins</a></li>
+          
+          <br><br><br><br>
+
           <li><a href="add_user.php">Add User</a></li>
           <li><a href="viewallusers.php">View All Users</a></li>
-          <li><a href="searchuser.php">Search User</a></li>
-          <li><a class="active" href="viewallfeedbacks.php">View Feedback</a></li>
+          <li><a class="active" href="searchuser.php">Search User</a></li>
+          
     </ul>
   </div>
 </div>
@@ -527,49 +523,262 @@ $con = mysqli_connect($servername, $username, $password, $dbname);
 if (!$con) {
 	die("Connection failed: " . mysqli_connect_error());
 }
+
+$usernamee = ""; $email = ""; $age = ""; $country = ""; $date = "";
+$shoulder = ""; $bust = ""; $waist = ""; $hip = "";
+$weight = ""; $height = "";
+$body_shape = ""; $xbody_shape = "";
+
+
+if(isset($_POST['btnSearch'])){
+
+    $email = $_POST['email'];
+
+        $sql = "SELECT * FROM user_details WHERE email LIKE '%$email%'";
+        $result = mysqli_query($con,$sql);
+
+        if(mysqli_num_rows($result)==1){
+            $row=mysqli_fetch_row($result);
+
+            $usernamee = $row[0];
+            $age = $row[2];
+
+
+            $Image = $row[4];
+
+
+            $country = $row[5];
+            $date = $row[6];
+
+            $shoulder = $row[7];
+            $bust = $row[8];
+            $waist = $row[9];
+            $hip = $row[10];
+
+            $weight = $row[11];
+            $height = $row[12];
+
+            $body_shape = $row[13];
+
+        }else{
+            echo "<script>alert('Sorry. User Record Not Found !!')</script>";
+        }
+}
+
+
+
+
+
+
+
+
+
+
+
+if(isset($_POST['btnUpdate'])){
+
+        $email = $_POST['email']; // something wrong in this function
+
+        if(empty($email)){
+          echo "<script>alert('Filed can not be Empty!.')</script>";
+        }else{
+
+        $usernamee = $_POST['username'];
+        $age = $_POST['age'];
+        $country = $_POST['country'];
+        $date = $_POST['date'];
+
+        $shoulder = $_POST['shoulder'];
+        $bust = $_POST['bust'];
+        $waist = $_POST['waist'];
+        $hip = $_POST['hip'];
+
+        $weight = $_POST['weight'];
+        $height = $_POST['height'];
+
+        $shoulder_to_hip_ratio = $shoulder / $hip;
+		    $bust_to_waist_ratio = $bust / $waist;
+
+        if ($shoulder_to_hip_ratio < 0.8 && $bust_to_waist_ratio < 0.75) {
+          $xbody_shape = "Pear";
+          } elseif ($shoulder_to_hip_ratio > 1.25 && $bust_to_waist_ratio < 0.75) {
+          $xbody_shape = "Inverted Triangle";
+          } elseif ($shoulder_to_hip_ratio < 0.8 && $bust_to_waist_ratio >= 0.75 && $bust_to_waist_ratio <= 0.85) {
+          $xbody_shape = "Spoon";
+          } elseif ($shoulder_to_hip_ratio >= 0.8 && $shoulder_to_hip_ratio <= 1.25 && $bust_to_waist_ratio >= 0.75 && $bust_to_waist_ratio <= 0.85) {
+          $xbody_shape = "Rectangle";
+          } else {
+          $xbody_shape = "Hourglass";
+          }
+          
+
+          if(empty($email)||empty($usernamee)||empty($age)||empty($country)||empty($date)||
+                    empty($shoulder)||empty($bust)||empty($waist)||empty($hip)||
+            empty($weight)||empty($height)||empty($xbody_shape)){
+                
+                      echo "<script>alert('Filed can not be Empty!.')</script>";
+          }
+          else{
+            //if(10 < $age && $age < 120){
+                  $sql ="UPDATE user_details SET (username, age, country, date, shoulder, bust, waist, hip,
+                                                    weight, height, body_shape) 
+                                                VALUES ('".$usernamee."', ".$age.", '".$country."', '".$date."', 
+                                                    ".$shoulder.", ".$bust.", ".$waist.", ".$hip.", ".$weight.", ".$height.",
+                                                     '".$xbody_shape."') WHERE email=".$email;
+
+
+
+
+
+            //}else{
+                 //   echo "<script>alert('For you to register in this system,<br> your age should be between 10 and 120 years.')</script>";
+                 echo "<script>alert('For you to register in this system,<br> your age should be between 10 and 120 years.')</script>";
+                }  
+            //}
+    
+        }
+}
     
 ?>
-
-     <?php
-            $sql="SELECT * FROM feedbacks";
-            $result = mysqli_query($con,$sql);
-     ?>
 
 <br>
 
 <div class="tableFixHead">
 <table class="table1" id="myTable" style="margin-left:20%;width:80%;" >
-	<thead>
-<tr style="background-color:#caf0f8;height:70px;">
-	<th>ID</th>
-    <th>Name</th>
-    <th>Feedback</th>
-    <th>Mood</th>
+<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data">
 
-	</tr>
-	</thead>
-	<tbody>	
-		<?php
-			if ($result->num_rows > 0) {
-				
-				while ($row = $result->fetch_assoc()) {
-		?>
 
-					<tr style="background-color:#caf0f8">
-					<td class="td"><?php echo $row['id']; ?></td>
-					<td class="td"><?php echo $row['name']; ?></td>
-					<td class="td"><?php echo $row['feedback']; ?></td>
-                    <td class="td"><?php echo $row['mood']; ?></td>
-					</tr>	
-                
-		<?php		}
-			}
-		?>
-	        	
-	</tbody>
+    <tr style="background-color:#caf0f8;height:70px;">
+      <th>Email</th>
+      <td>
+        <div class="user-box">
+			<input type="email" name="email" required="" style="height:50px;" value="<?php echo $email; ?>">
+            <input type="submit" name="btnSearch" value="SEARCH" style="height:50px; width:100px;">
+            <input type="submit" name="btnUpdate" value="UPDATE" style="height:50px; width:100px;">
+            <input type="reset" name="btnCLEAR" value="CLEAR ALL" style="height:50px; width:100px;">   
+		</div>
+      </td>
+    </tr>
+
+    <tr style="background-color:#caf0f8;height:70px;">
+      <th>Username</th>
+      <td>
+        <div class="user-box">
+			<input type="text" name="username" style="height:50px;" value="<?php echo $usernamee; ?>">
+		</div>
+      </td>
+    </tr>
+
+    <tr style="background-color:#caf0f8;height:70px;">
+      <th>Image</th>
+      <td><br>
+        <img src="<?php echo $Image; ?>" alt="ff"style='height:200px;width:200;margin-bottom:20px;border-radius:20px;background-color:white;'></td>
+    </tr>
+
+    <tr style="background-color:#caf0f8;height:70px;">
+      <th>Age</th>
+      <td>
+        <div class="user-box">
+			<input type="number" name="age" style="height:50px;" value="<?php echo $age; ?>">
+		</div>
+      </td>
+    </tr>
+
+    <tr style="background-color:#caf0f8;height:70px;">
+      <th>Country</th>
+      <td>
+        <div class="user-box">
+				  <input type="text" name="country" style="height:50px;" value="<?php echo $country; ?>">
+			  </div>
+      </td>
+    </tr>
+
+    <tr style="background-color:#caf0f8;height:70px;">
+      <th>Date</th>
+      <td>
+        <div class="user-box">
+				  <input type="date" name="date" style="height:50px;" value="<?php echo $date; ?>">
+			  </div>
+      </td>
+    </tr>
+
+    <tr style="background-color:#caf0f8;height:70px;">
+      <th>Shoulder Size</th>
+      <td>
+        <div class="user-box">
+        <input type="number" step="0.01" name="shoulder" style="height:50px;" value="<?php echo $shoulder; ?>">
+			  </div>
+      </td>
+    </tr>
+
+    <tr style="background-color:#caf0f8;height:70px;">
+      <th>Bust Size</th>
+      <td>
+        <div class="user-box">
+        <input type="number" step="0.01" name="bust" style="height:50px;" value="<?php echo $bust; ?>">
+			  </div>
+      </td>
+    </tr>
+
+    <tr style="background-color:#caf0f8;height:70px;">
+      <th>Waist Size</th>
+      <td>
+        <div class="user-box">
+        <input type="number" step="0.01" name="waist" style="height:50px;" value="<?php echo $waist; ?>">
+			  </div>
+      </td>
+    </tr>
+
+    <tr style="background-color:#caf0f8;height:70px;">
+      <th>Hip Size</th>
+      <td>
+        <div class="user-box">
+        <input type="number" step="0.01" name="hip" style="height:50px;" value="<?php echo $hip; ?>">
+			  </div>
+      </td>
+    </tr>
+
+    <tr style="background-color:#caf0f8;height:70px;">
+      <th>Weight</th>
+      <td>
+        <div class="user-box">
+        <input type="number" step="0.01" name="weight" style="height:50px;" value="<?php echo $weight; ?>">
+			  </div>
+      </td>
+    </tr>
+
+    <tr style="background-color:#caf0f8;height:70px;">
+      <th>Height</th>
+      <td>
+        <div class="user-box">
+            <input type="number" step="0.01" name="height" style="height:50px;" value="<?php echo $height; ?>">
+		</div>
+      </td>
+    </tr>
+
+    <tr style="background-color:#caf0f8;height:70px;">
+      <th>Body Shape</th>
+      <td>
+        <div class="user-box">
+            <input type="text" name="bodyshape" style="height:50px;" value="<?php echo $body_shape; ?>">
+		</div>
+      </td>
+    </tr>
+
+    <tr style="background-color:#457b9d;height:70px;">
+      <th></th>
+      <td>
+        
+      </td>
+    </tr>
+
+</form>
 </table>
 	</div>
 
 
 </body>
 </html>
+
+
+
