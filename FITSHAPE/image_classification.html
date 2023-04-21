@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Body Shape Predictor</title>
+	<link rel="stylesheet" type="text/css" href="image_classification_style.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Body Shape Predictor</h1>
+		<form method="post" action="classify.php" enctype="multipart/form-data">
+			<input type="file" name="image" id="image" accept=".jpg, .jpeg, .png" required>
+			<button type="submit">Predict</button>
+		</form>
+		<div class="result">
+			<p>Predicted body shape: <span id="predicted"></span></p>
+		</div>
+	</div>
+</body>
+</html>
