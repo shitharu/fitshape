@@ -60,6 +60,8 @@ $path = "PicZ/";
 			$body_shape = "Hourglass";
 		  }
 
+		  echo $body_shape;
+
 
         if(empty($username)||empty($age)||empty($Image)||empty($country)||empty($date)||
                 empty($shoulder)||empty($bust)||empty($waist)||empty($hip)||

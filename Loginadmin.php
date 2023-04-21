@@ -22,7 +22,7 @@
 
 			if ($count == 1) {
 				$_SESSION['username'] = $username;
-				header("location: adminprofile.php"); // USER DETAILS
+				header("location: adminpp.php"); // USER DETAILS
 			} else {
 				$error = "Your Login Name or Password is invalid";
 			}
