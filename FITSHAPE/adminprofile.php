@@ -519,7 +519,7 @@ textarea:focus, input:focus{
     <ul>
           <li><a href="blankadmin.php">Admin Dashboard</a></li>
           <li><a href="adminpp.php">Admin Profile</a></li>
-          <li><a href="x.php">Add an Admin</a></li>
+          <li><a href="registeradmin.php">Add an Admin</a></li>
           <li><a class="active" href="adminprofile.php">View All Admins</a></li>
           
           <br><br><br><br>
