@@ -28,13 +28,11 @@ $name = ""; $feedback = ""; $mood = "";
 						VALUES ('".$name."', '".$feedback."', '".$mood."')";
 
                 if(mysqli_query($conn,$sql)){
-                    move_uploaded_file($temp_name,$Image);
 
                     echo "<script>alert('Your details inserted!.')</script>";
 					
 					header("location: viewallfeedbacksuser.php");
 					
-
                 }else{
 
                    echo "<script>alert('Your details not inserted.Try Again.')</script>";

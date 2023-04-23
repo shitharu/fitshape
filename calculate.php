@@ -42,92 +42,77 @@ if(isset($_POST['btnSUBMIT'])){
 <html>
 <head>
 	<title>Body Shape</title>
-	<link rel="stylesheet" type="text/css" href="registercss.css">
+	<link rel="stylesheet" type="text/css" href="css/bshape.css">
 	<link rel="icon" href="images/logo/logo.png">
 </head>
 <body>
 	<div class="registration-box">
-		<h2>Body Shape Calculator</h2>
+		<h2>Body Shape</h2>
 		<form method="post" enctype="multipart/form-data">
 			
-
-
 			<div class="user-box">
-				<label id ="shape" for="float-data">Your Body Shape Type is : <?php echo $body_shape?></label>
+				<label id ="shape" for="float-data">Wow .. You so beautiful. Your Have a<b> <?php echo $body_shape?> </b>Body Shape Figure.</label>
 			</div><br>
 
-
             <?php
-                //$num1 = $_POST["num1"];
-                //$num2 = $_POST["num2"];
 
-                //$img1 = "images/Pear_about/dressbarn_Blog_HowToDressForBodyShape_Pear_Header.webp";
-                //$img2 = "images/Inverted_Triangle_about/dressbarn_Blog_HowToDressForBodyShape_InvertedTriangle_Header.webp";
-                //$img3 = "images/Spoon_about/dressbarn_Blog_HowToDressForBodyShape_Spoon_Header.webp";
-                //$img4 = "images/Rectangle_about/dressbarn_Blog_HowToDressForBodyShape_Rectangle_Header.webp";
-                //$img5 = "images/Hourglass_about/dressbarn_Blog_HowToDressForBodyShape_Hourglass_Header.webp";
-
-                $img1 = imagecreatefromjpeg("images/Pear_about/dressbarn_Blog_HowToDressForBodyShape_Pear_Header.webp");
-                $img2 = imagecreatefromjpeg("images/Inverted_Triangle_about/dressbarn_Blog_HowToDressForBodyShape_InvertedTriangle_Header.webp");
-                $img3 = imagecreatefromjpeg("images/Spoon_about/dressbarn_Blog_HowToDressForBodyShape_Spoon_Header.webp");
-                $img4 = imagecreatefromjpeg("images/Rectangle_about/dressbarn_Blog_HowToDressForBodyShape_Rectangle_Header.webp");
-                $img5 = imagecreatefromjpeg("images/Hourglass_about/dressbarn_Blog_HowToDressForBodyShape_Hourglass_Header.webp");
-
-
-                $resized1 = imagescale($img1, 100, 100);
-                $resized2 = imagescale($img2, 100, 100);
-                $resized3 = imagescale($img3, 100, 100);
-                $resized4 = imagescale($img4, 100, 100);
-                $resized5 = imagescale($img5, 100, 100);
-
-                 $resized1 = imagescale($img1, 100, 100);
-                $resized2 = imagescale($img2, 100, 100);
-                $resized3 = imagescale($img3, 100, 100);
-                $resized4 = imagescale($img4, 100, 100);
-                $resized5 = imagescale($img5, 100, 100);
-
+                $img1 = "images/Pear_about/dressbarn_Blog_HowToDressForBodyShape_Pear_Header.webp";
+                $img2 = "images/Inverted_Triangle_about/dressbarn_Blog_HowToDressForBodyShape_InvertedTriangle_Header.webp";
+                $img3 = "images/Spoon_about/dressbarn_Blog_HowToDressForBodyShape_Spoon_Header.webp";
+                $img4 = "images/Rectangle_about/dressbarn_Blog_HowToDressForBodyShape_Rectangle_Header.webp";
+                $img5 = "images/Hourglass_about/dressbarn_Blog_HowToDressForBodyShape_Hourglass_Header.webp";
 
                 if ($body_shape == "Pear") 
                     {
-                        echo '<img src="'.$resized1.'" alt="Pear Body Shape Image">';
+                        echo '<img src="'.$img1.'" alt="Pear Body Shape image" style="width:700px;height:400px;">
+                        <br><br>
+                        If you want more imformation about 
+                        <a href="Pear_About.html">Pear Body Shape</a>. <br>
+                        Stay update with us because, We have a lot of details about fashion. 
+                        Register with <a href="index.php">FITSHAPE.LK</a> for more details.';
                     } 
                 else if ($body_shape == "Inverted Triangle") 
                     {
-                        echo '<img src="'.$resized2.'" alt="Inverted Triangle Body Shape Image">';
+                        echo '<img src="'.$img2.'" alt="Inverted Triangle Body Shape image" style="width:700px;height:400px;">
+
+                        <br><br>
+                        If you want more imformation about 
+                        <a href="Inverted_Triangle_About.html">Inverted Triangle Body Shape</a>. <br>
+                        Stay update with us because, We have a lot of details about fashion. 
+                        Register with <a href="index.php">FITSHAPE.LK</a> for more details.';
                     } 
                 else if ($body_shape == "Spoon") 
                     {
-                        echo '<img src="'.$resized3.'" alt="Spoon Body Shape Image">';
+                        echo '<img src="'.$img3.'" alt="Spoon Body Shape image" style="width:700px;height:400px;">
+
+                        <br><br>
+                        If you want more imformation about 
+                        <a href="Spoon_About.html">Spoon Body Shape</a>. <br>
+                        Stay update with us because, We have a lot of details about fashion. 
+                        Register with <a href="index.php">FITSHAPE.LK</a> for more details.';
                     }
                 else if ($body_shape == "Rectangle") 
                     {
-                        echo '<img src="'.$resized4.'" alt="Rectangle Body Shape Image">';
+                        echo '<img src="'.$img4.'" alt="Rectangle Body Shape image" style="width:700px;height:400px;">
+
+                        <br><br>
+                        If you want more imformation about 
+                        <a href="Rectangle_About.html">Rectangle Body Shape</a>. <br>
+                        Stay update with us because, We have a lot of details about fashion. 
+                        Register with <a href="index.php">FITSHAPE.LK</a> for more details.';
                     } 
                 else if ($body_shape == "Hourglass")
                     {
-                        echo '<img src="'.$resized5.'" alt="Hourglass Body Shape Image">';
+                        echo '<img src="'.$img5.'" alt="Hourglass Body Shape image" style="width:700px;height:400px;">
+
+                        <br><br>
+                        If you want more imformation about 
+                        <a href="Hourglass_About.html">Hourglass Body Shape</a>. <br>
+                        Stay update with us because, We have a lot of details about fashion. 
+                        Register with <a href="index.php">FITSHAPE.LK</a> for more details.';
                     }
-
-
-
-                    $img1 = imagecreatefromjpeg("image1.jpg");
-                    $img2 = imagecreatefromjpeg("image2.jpg");
-
-                    // resize the images to 100x100 pixels
-                    $resized1 = imagescale($img1, 100, 100);
-                    $resized2 = imagescale($img2, 100, 100);
-
-                    // save the resized images
-                    imagejpeg($resized1, "resized1.jpg");
-                    imagejpeg($resized2, "resized2.jpg");
-
-                    // display the resized images
-                    echo "<img src='resized1.jpg'>";
-                    echo "<img src='resized2.jpg'>";
-
             ?>
-
-            
+  
             <br>
             <br>      
 

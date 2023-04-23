@@ -13,22 +13,22 @@
 
 			<div class="user-box">
 				<input type="number" step="0.01" name="shoulder" required="">
-				<label for="float-data">Your Shoulder Size</label>
+				<label for="float-data">Your Shoulder Size (cm)</label>
 			</div><br>
 
 			<div class="user-box">
 				<input type="number" step="0.01" name="bust" required="">
-				<label for="float-data">Your Bust Size</label>
+				<label for="float-data">Your Bust Size (cm)</label>
 			</div><br>
 
 			<div class="user-box">
 				<input type="number" step="0.01" name="waist" required="">
-				<label for="float-data">Your Waist Size</label>
+				<label for="float-data">Your Waist Size (cm)</label>
 			</div><br>
 
 			<div class="user-box">
 				<input type="number" step="0.01" name="hip" required="">
-				<label for="float-data">Your Hip Size</label>
+				<label for="float-data">Your Hip Size (cm)</label>
 			</div><br>
 
 

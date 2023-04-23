@@ -11,27 +11,28 @@ if (!$conn) {
 	die("Connection failed: " . mysqli_connect_error());
 }
 
-$name = ""; $feedback = ""; $mood = "";
+$name = ""; $email = ""; $subject = ""; $msg = "";
     
     if(isset($_POST['btnSUBMIT'])){
 
 		$name = $_POST['name'];
-		$feedback = $_POST['feedback'];
-		$mood = $_POST['dropCategory'];
+		$email = $_POST['email'];
+		$subject = $_POST['subject'];
+        $msg = $_POST['msg'];
 
-        if(empty($name)||empty($feedback)||empty($mood)){
+        if(empty($name)||empty($email)||empty($subject)||empty($msg)){
             
                   echo "<script>alert('Filed can not be Empty!.')</script>";
         }else{
                
-				$sql="INSERT INTO feedbacks (name, feedback, mood) 
-						VALUES ('".$name."', '".$feedback."', '".$mood."')";
+				$sql="INSERT INTO contact_us (name, email, subject, msg) 
+						VALUES ('".$name."', '".$email."', '".$subject."', '".$msg."')";
 
                 if(mysqli_query($conn,$sql)){
 
-                    echo "<script>alert('Your details inserted!.')</script>";
+                    echo "<script>alert('Your Message has been sent!.')</script>";
 					
-					header("location: allfeedbacks.php");
+					header("location: home.html");
 					
                 }else{
 
@@ -49,7 +50,7 @@ $name = ""; $feedback = ""; $mood = "";
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Feedback Form</title>
+	<title>cONTACT Form</title>
     <link rel="icon" href="images/logo/logo.png">
 	<link rel="stylesheet" type="text/css" href="registercss.css">
 
@@ -66,10 +67,7 @@ $name = ""; $feedback = ""; $mood = "";
 <body>
 	<div class="registration-box">
     
-        <h2 style="text-align:center;">Feedback Form</h2>
-            <a href="allfeedbacks.php">
-                <button class="btn btn-primary btn-lg" style="width:360px"">View All Feedbacks</button>
-            </a><br><br>
+        <h2 style="text-align:center;">Contact Form</h2>
         
 		<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data">
 			
@@ -79,22 +77,20 @@ $name = ""; $feedback = ""; $mood = "";
 				<label>Name</label>
 			</div>
 
-			<div>
-            <label>Feedback</label>
-				<textarea type="text-box" name="feedback" required="" style="height:200px; width:350px"></textarea>
+            <div class="user-box">
+				<input type="text" name="email" required="">
+				<label>Email</label>
 			</div>
 
-            <div>
-                <label>Your Mood :</label>  &nbsp; &nbsp;
+            <div class="user-box">
+				<input type="text" name="subject" required="">
+				<label>Subject</label>
+			</div>
 
-                        <select name="dropCategory" id="dropCategory">
-                            <option value="Satisfied"> Satisfied </option>
-                            <option value="Very Good"> Very Good </option>
-                            <option value="Good"> Good </option>
-                            <option value="Not Bad"> Not Bad </option>
-                            <option value="Bad"> Bad </option>
-                        </select>
-                </div>
+			<div>
+            <label>Your Message</label>
+				<textarea type="text-box" name="msg" required="" style="height:200px; width:350px"></textarea>
+			</div>
             
             <br>
             <input type="submit" value="Submit" name="btnSUBMIT" class="btn btn-primary btn-lg" style="width:360px">
