@@ -73,34 +73,14 @@
                     $output = shell_exec($command);
 
                     // Display the predicted class
-                    echo "<h2>Predicted body shape: <br>" . $output . "body shape</h2>";
-					print($output);
-
-					"<br><br>";
+                    //echo "<h2>Predicted body shape: <br>" . $output . "body shape</h2>";
+					//print($output);
 
 
-					// Get the last word in the $output variable
-					//$last_word = end(explode(" ", $output));
-					//$last_word = explode(".", $output)[count(explode(".", $output))-1]; // get the last word in the username
+					$last_word = explode(" ", trim($output));	// Split the output into an array of words
+					$last_word = end($last_word);		// Get the last word in the $output variable
 
-					//$last_word = explode(' ', $output);
-					//$last_word = end($last_word);
-
-					//$output_array = explode(" ", $output);
-					//$last_word = array_slice($output_array, -3);
-
-					//$words = explode(' ', trim($output));
-					//$last_word = array_slice($words, -1);
-
-					//$last_word = end(explode(" ", $output));
-
-					//$last_word = explode(" ", $output); // Split the output into an array of words
-					//$last_word = end($last_word); 
-
-					$last_word = explode(" ", trim($output));
-					$last_word = end($last_word);
-
-					print($last_word);
+					//print($last_word);
 
 					// Check the value of the last word and redirect to the appropriate HTML file
 					if ($last_word == "hourglass") {
@@ -117,15 +97,6 @@
 					// Handle the case where the last word does not match any of the expected values
 					echo "Invalid value for output.";
 					}
-				
-
-
-
-
-
-
-
-
 
                 } else {
                     echo 'Invalid file format. Only JPG, JPEG and PNG are allowed.';
@@ -135,13 +106,6 @@
                 echo "<h2>Error uploading image</h2>";
             }
         ?>
-
-
-
-
-
-
-
 
             
 	</div>

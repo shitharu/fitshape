@@ -2,7 +2,7 @@
 
 session_start();
 
-if (!isset($_SESSION['email'])) {
+if (!isset($_SESSION['username'])) {
     header("Location: LoginPage.php");
 }
 
@@ -508,6 +508,7 @@ textarea:focus, input:focus{
           <li><a href="adminpp.php">Admin Profile</a></li>
           <li><a href="registeradmin.php">Add an Admin</a></li>
           <li><a href="adminprofile.php">View All Admins</a></li>
+          <li><a href="searchadmin.php">Search Admin</a></li>
           
           <br><br><br><br>
 

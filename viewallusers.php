@@ -480,6 +480,12 @@ textarea:focus, input:focus{
 <li class="li"><a href="About Us.html">About Us</a></li>
 <li class="li"><a href="indexadmin.php">Login</a></li>
 
+<li class="li"><a href="search_hourglass.php" style="padding-right: 180px;">HOURGLASS</a></li>
+<li class="li"><a href="search_inverted_triangle.php">INVERTED RECTANGLE</a></li>
+<li class="li"><a href="search_rectangle.php">RECTANGLE</a></li>
+<li class="li"><a href="search_pear.php">PEAR</a></li>
+<li class="li"><a href="search_spoon.php">SPOON</a></li>
+
 </ul>
 
 <div class="sidenav">
@@ -493,6 +499,7 @@ textarea:focus, input:focus{
           <li><a href="adminpp.php">Admin Profile</a></li>
           <li><a href="registeradmin.php">Add an Admin</a></li>
           <li><a href="adminprofile.php">View All Admins</a></li>
+          <li><a href="searchadmin.php">Search Admin</a></li>
           
           <br><br><br><br>
 
@@ -528,7 +535,9 @@ if (!$con) {
 
 <br>
 
+
 <div class="tableFixHead">
+  
 <table class="table1" id="myTable" style="margin-left:20%;width:80%;" >
 	<thead>
 <tr style="background-color:#caf0f8;height:70px;">

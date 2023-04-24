@@ -1,13 +1,3 @@
-<?php 
-
-session_start();
-
-if (!isset($_SESSION['username'])) {
-    header("Location: LoginPage.php");
-}
-
-?>
-
 <html>
 
 <head>
@@ -18,8 +8,8 @@ if (!isset($_SESSION['username'])) {
 
 body {
   font-family: "Lato", sans-serif;
-  height: 100%;
-  width: 100%;
+  background-size:cover;
+  background-image: url("https://images.pexels.com/photos/370799/pexels-photo-370799.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 }
 
 .sidenav {
@@ -48,11 +38,11 @@ body {
      div.dropdown-vertically ul {
       list-style: none;
       background:#a1caf1;
-      font-size:16px;
+      font-size:16px;      
      }
 	 
      div.dropdown-vertically li {
-      position:relative;
+      position:relative;      
      }
 	 
      div.dropdown-vertically a { 
@@ -60,7 +50,7 @@ body {
       text-decoration:none;
       padding:10px;
       color: #feffff;
-      text-align: center; 
+      text-align: center;       
      }
 	
      div.dropdown-vertically li:hover > a {
@@ -102,7 +92,7 @@ body {
   padding-right: 8px;
 }
 
-@media screen and (max-height: 450px) {
+@media screen and (max-height: 450px;) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
@@ -177,26 +167,21 @@ h2{
     }
 
   h1{
-   
     margin-top: 100px;  
     text-align: center;
     width:20px;
   }  
 
   h6{
-   
    margin-top: 10px;  
    text-align: center;
  }  
 
- h5{
-   
+ h5{ 
    margin-top: -19px;  
    text-align: center;
    color: #feffff;
  } 
-
-
   .success {
    background: #D4EDDA;
    color: #40754C;
@@ -376,9 +361,9 @@ input[type=submit]:hover {
 
 .tableFixHead {
 		overflow-y: auto;
-		height: 570px;
+		height: 570px;  // table height 
 		width:97%;
-        margin-left:10px;
+       margin-left:10px;
 }
 
 .tableFixHead thead th {
@@ -493,7 +478,13 @@ textarea:focus, input:focus{
 <ul class="ul" >
 <li class="li"><a href="Home.html" style="padding-right: 50px;">Home</a></li>
 <li class="li"><a href="About Us.html">About Us</a></li>
-<li class="li"><a href="index.php">Login</a></li>
+<li class="li"><a href="indexadmin.php">Login</a></li>
+
+<li class="li"><a class="active" href="search_hourglass.php" style="padding-right: 180px;">HOURGLASS</a></li>
+<li class="li"><a href="search_inverted_triangle.php">INVERTED RECTANGLE</a></li>
+<li class="li"><a href="search_rectangle.php">RECTANGLE</a></li>
+<li class="li"><a href="search_pear.php">PEAR</a></li>
+<li class="li"><a href="search_spoon.php">SPOON</a></li>
 
 </ul>
 
@@ -504,21 +495,19 @@ textarea:focus, input:focus{
 
 <br><br>
     <ul>
-   
           <li><a href="blankadmin.php">Admin Dashboard</a></li>
           <li><a href="adminpp.php">Admin Profile</a></li>
           <li><a href="registeradmin.php">Add an Admin</a></li>
           <li><a href="adminprofile.php">View All Admins</a></li>
-          <li><a href="searchadmin.php">Search Admin</a></li>
           
           <br><br><br><br>
 
           <li><a href="add_user.php">Add User</a></li>
-          <li><a href="viewallusers.php">View All Users</a></li>
+          <li><a class="active" href="viewallusers.php">View All Users</a></li>
           <li><a href="searchuser.php">Search User</a></li>
           <li><a href="viewallfeedbacks.php">View All User Feedbacks</a></li>
-          <li><a class="active" href="contact_msg.php">View All User Messages</a></li>
-
+          <li><a href="contact_msg.php">View All User Messages</a></li>
+          
     </ul>
   </div>
 </div>
@@ -539,7 +528,7 @@ if (!$con) {
 ?>
 
      <?php
-            $sql="SELECT * FROM contact_us";
+            $sql="SELECT * FROM user_details WHERE body_shape='hourglass'";
             $result = mysqli_query($con,$sql);
      ?>
 
@@ -549,12 +538,19 @@ if (!$con) {
 <table class="table1" id="myTable" style="margin-left:20%;width:80%;" >
 	<thead>
 <tr style="background-color:#caf0f8;height:70px;">
-	<th>ID</th>
-    <th>Name</th>
-    <th>Emails</th>
-    <th>Subject</th>
-    <th>Message</th>
-
+    <th>Username</th>
+    <th>Email</th>
+    <th>Age</th>
+    <th>Image</th>
+    <th>Country</th>
+    <th>Date</th>
+    <th>Shoulder Size</th>
+    <th>Bust Size</th>
+    <th>Waist Size</th>
+    <th>Hip Size</th>
+    <th>Weight</th>
+    <th>Height</th>
+    <th>Body Shape</th>
 
 	</tr>
 	</thead>
@@ -563,17 +559,33 @@ if (!$con) {
 			if ($result->num_rows > 0) {
 				
 				while ($row = $result->fetch_assoc()) {
+                    $image = $row['image'];
 		?>
 
 					<tr style="background-color:#caf0f8">
-					<td class="td"><?php echo $row['id']; ?></td>
-					<td class="td"><?php echo $row['name']; ?></td>
-					<td class="td"><?php echo $row['email']; ?></td>
-                    <td class="td"><?php echo $row['subject']; ?></td>
-                    <td class="td"><?php echo $row['msg']; ?></td>
+                        <td class="td"><?php echo $row['username']; ?></td>
+                        <td class="td"><?php echo $row['email'];?></td>
+                        <td class="td"><?php echo $row['age']; ?></td>
+
+                        <td> 
+                            <img src="<?php echo $image;?>" alt="ff"style='height:100px;width:100px;margin-bottom:20px;border-radius:20px;background-color:white;'>
+                        </td>
+
+                        <td class="td"><?php echo $row['country']; ?></td>
+                        <td class="td"><?php echo $row['date']; ?></td>
+                        <td class="td"><?php echo $row['shoulder']; ?></td>
+                        <td class="td"><?php echo $row['bust']; ?></td>
+                        <td class="td"><?php echo $row['waist']; ?></td>
+                        <td class="td"><?php echo $row['bust']; ?></td>
+
+                        <td class="td"><?php echo $row['weight']; ?></td>
+                        <td class="td"><?php echo $row['height']; ?></td>
+                        <td class="td"><?php echo $row['body_shape']; ?></td>
+                        
 					</tr>	
                 
 		<?php		}
+    
 			}
 		?>
 	        	

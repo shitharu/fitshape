@@ -1,25 +1,15 @@
-<?php 
-
-session_start();
-
-if (!isset($_SESSION['username'])) {
-    header("Location: LoginPage.php");
-}
-
-?>
-
 <html>
 
 <head>
-    <title>View All Feedbacks</title>
+    <title>Search Admin</title>
     <link rel="icon" href="images/logo/logo.png">
 
 <style>
 
 body {
   font-family: "Lato", sans-serif;
-  height: 100%;
-  width: 100%;
+  background-size:cover;
+  background-image: url("https://images.pexels.com/photos/370799/pexels-photo-370799.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 }
 
 .sidenav {
@@ -378,7 +368,7 @@ input[type=submit]:hover {
 		overflow-y: auto;
 		height: 570px;
 		width:97%;
-        margin-left:10px;
+       margin-left:10px;
 }
 
 .tableFixHead thead th {
@@ -493,7 +483,7 @@ textarea:focus, input:focus{
 <ul class="ul" >
 <li class="li"><a href="Home.html" style="padding-right: 50px;">Home</a></li>
 <li class="li"><a href="About Us.html">About Us</a></li>
-<li class="li"><a href="index.php">Login</a></li>
+<li class="li"><a href="indexadmin.php">Login</a></li>
 
 </ul>
 
@@ -504,12 +494,11 @@ textarea:focus, input:focus{
 
 <br><br>
     <ul>
-   
           <li><a href="blankadmin.php">Admin Dashboard</a></li>
           <li><a href="adminpp.php">Admin Profile</a></li>
           <li><a href="registeradmin.php">Add an Admin</a></li>
           <li><a href="adminprofile.php">View All Admins</a></li>
-          <li><a href="searchadmin.php">Search Admin</a></li>
+          <li><a class="active" href="searchadmin.php">Search Admin</a></li>
           
           <br><br><br><br>
 
@@ -517,8 +506,8 @@ textarea:focus, input:focus{
           <li><a href="viewallusers.php">View All Users</a></li>
           <li><a href="searchuser.php">Search User</a></li>
           <li><a href="viewallfeedbacks.php">View All User Feedbacks</a></li>
-          <li><a class="active" href="contact_msg.php">View All User Messages</a></li>
-
+          <li><a href="contact_msg.php">View All User Messages</a></li>
+          
     </ul>
   </div>
 </div>
@@ -535,52 +524,89 @@ $con = mysqli_connect($servername, $username, $password, $dbname);
 if (!$con) {
 	die("Connection failed: " . mysqli_connect_error());
 }
+
+$usernamee = ""; $telno = ""; $name = ""; $email = ""; 
+
+
+if(isset($_POST['btnSearch'])){
+
+    $usernamee = $_POST['username'];
+
+        $sql = "SELECT * FROM admin_login WHERE username LIKE '%$usernamee%'";
+        $result = mysqli_query($con,$sql);
+
+        if(mysqli_num_rows($result)==1){
+            $row=mysqli_fetch_row($result);
+
+            $usernamee = $row[1];
+            $telno = $row[3];
+            $name = $row[4];
+            $email = $row[5];
+
+
+        }else{
+            echo "<script>alert('Sorry. Admin Record Not Found !!')</script>";
+        }
+}
+
     
 ?>
-
-     <?php
-            $sql="SELECT * FROM contact_us";
-            $result = mysqli_query($con,$sql);
-     ?>
 
 <br>
 
 <div class="tableFixHead">
 <table class="table1" id="myTable" style="margin-left:20%;width:80%;" >
-	<thead>
-<tr style="background-color:#caf0f8;height:70px;">
-	<th>ID</th>
-    <th>Name</th>
-    <th>Emails</th>
-    <th>Subject</th>
-    <th>Message</th>
+<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data">
 
 
-	</tr>
-	</thead>
-	<tbody>	
-		<?php
-			if ($result->num_rows > 0) {
-				
-				while ($row = $result->fetch_assoc()) {
-		?>
+    <tr style="background-color:#caf0f8;height:70px;">
+      <th>Username</th>
+      <td>
+        <div class="user-box">
+			<input type="username" name="username" required="" style="height:50px;" value="<?php echo $usernamee; ?>">
+            <input type="submit" name="btnSearch" value="SEARCH" style="height:50px; width:100px;">
+            <input type="submit" name="btnUpdate" value="UPDATE" style="height:50px; width:100px;">
+            <input type="reset" name="btnCLEAR" value="CLEAR ALL" style="height:50px; width:100px;">   
+		</div>
+      </td>
+    </tr>
 
-					<tr style="background-color:#caf0f8">
-					<td class="td"><?php echo $row['id']; ?></td>
-					<td class="td"><?php echo $row['name']; ?></td>
-					<td class="td"><?php echo $row['email']; ?></td>
-                    <td class="td"><?php echo $row['subject']; ?></td>
-                    <td class="td"><?php echo $row['msg']; ?></td>
-					</tr>	
-                
-		<?php		}
-			}
-		?>
-	        	
-	</tbody>
+    <tr style="background-color:#caf0f8;height:70px;">
+      <th>Contact Number</th>
+      <td>
+        <div class="user-box">
+			<input type="text" name="telno" style="height:50px;" value="<?php echo $telno; ?>">
+		</div>
+      </td>
+    </tr>
+
+
+
+    <tr style="background-color:#caf0f8;height:70px;">
+      <th>Name</th>
+      <td>
+        <div class="user-box">
+			<input type="text" name="name" style="height:50px;" value="<?php echo $name; ?>">
+		</div>
+      </td>
+    </tr>
+
+    <tr style="background-color:#caf0f8;height:70px;">
+      <th>Email</th>
+      <td>
+        <div class="user-box">
+			<input type="email" name="email" style="height:50px;" value="<?php echo $email; ?>">
+		</div>
+      </td>
+    </tr>
+
+</form>
 </table>
 	</div>
 
 
 </body>
 </html>
+
+
+
