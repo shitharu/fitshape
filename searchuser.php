@@ -484,8 +484,6 @@ textarea:focus, input:focus{
 <li class="li"><a href="Home.html" style="padding-right: 50px;">Home</a></li>
 <li class="li"><a href="About Us.html">About Us</a></li>
 <li class="li"><a href="indexadmin.php">Login</a></li>
-<li class="li"><a href="x.php">Body Shape Analyzer</a></li>
-<li class="li"><a href="viewallfeedbacks.php">Feedbacks</a></li>
 
 </ul>
 
@@ -506,6 +504,8 @@ textarea:focus, input:focus{
           <li><a href="add_user.php">Add User</a></li>
           <li><a href="viewallusers.php">View All Users</a></li>
           <li><a class="active" href="searchuser.php">Search User</a></li>
+          <li><a href="viewallfeedbacks.php">View All User Feedbacks</a></li>
+          <li><a href="contact_msg.php">View All User Messages</a></li>
           
     </ul>
   </div>

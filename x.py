@@ -20,3 +20,4 @@ pred_class = np.argmax(preds)
 # Print the predicted class
 classes = ['hourglass', 'inverted triangle', 'pear', 'rectangle', 'spoon']
 print(classes[pred_class])
+

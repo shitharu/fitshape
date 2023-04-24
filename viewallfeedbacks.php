@@ -494,9 +494,6 @@ textarea:focus, input:focus{
 <li class="li"><a href="Home.html" style="padding-right: 50px;">Home</a></li>
 <li class="li"><a href="About Us.html">About Us</a></li>
 <li class="li"><a href="index.php">Login</a></li>
-<li class="li"><a href="x.php">Body Shape Analyzer</a></li>
-<li class="li"><a class="active" href="viewallfeedbacks.php">Feedbacks</a></li>
-
 </ul>
 
 <div class="sidenav">
@@ -506,11 +503,19 @@ textarea:focus, input:focus{
 
 <br><br>
     <ul>
-          <li><a href="adminprofile.php">Admin Dashboard</a></li>
+
+          <li><a href="blankadmin.php">Admin Dashboard</a></li>
+          <li><a href="adminpp.php">Admin Profile</a></li>
+          <li><a href="registeradmin.php">Add an Admin</a></li>
+          <li><a href="adminprofile.php">View All Admins</a></li>
+          
+          <br><br><br><br>
+
           <li><a href="add_user.php">Add User</a></li>
           <li><a href="viewallusers.php">View All Users</a></li>
           <li><a href="searchuser.php">Search User</a></li>
-          <li><a class="active" href="viewallfeedbacks.php">View Feedback</a></li>
+          <li><a class="active" href="viewallfeedbacks.php">View All User Feedbacks</a></li>
+          <li><a href="contact_msg.php">View All User Messages</a></li>
     </ul>
   </div>
 </div>

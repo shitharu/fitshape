@@ -589,8 +589,6 @@ textarea:focus, input:focus{
 <li class="li"><a href="Home.html" style="padding-right: 50px;">Home</a></li>
 <li class="li"><a href="About Us.html">About Us</a></li>
 <li class="li"><a href="indexadmin.php">Login</a></li>
-<li class="li"><a href="x.php">Body Shape Analyzer</a></li>
-<li class="li"><a href="viewallfeedbacks.php">Feedbacks</a></li>
 
 </ul>
 
@@ -611,6 +609,8 @@ textarea:focus, input:focus{
           <li><a class="active" href="add_user.php">Add User</a></li>
           <li><a href="viewallusers.php">View All Users</a></li>
           <li><a href="searchuser.php">Search User</a></li>
+          <li><a href="viewallfeedbacks.php">View All User Feedbacks</a></li>
+          <li><a href="contact_msg.php">View All User Messages</a></li>
           
     </ul>
   </div>
@@ -683,7 +683,7 @@ if (!$con) {
     </tr>
 
     <tr style="background-color:#caf0f8;height:70px;">
-      <th>Shoulder Size</th>
+      <th>Shoulder Size (cm)</th>
       <td>
         <div class="user-box">
         <input type="number" step="0.01" name="shoulder" required="" style="height:50px;">
@@ -692,7 +692,7 @@ if (!$con) {
     </tr>
 
     <tr style="background-color:#caf0f8;height:70px;">
-      <th>Bust Size</th>
+      <th>Bust Size (cm)</th>
       <td>
         <div class="user-box">
         <input type="number" step="0.01" name="bust" required="" style="height:50px;">
@@ -701,7 +701,7 @@ if (!$con) {
     </tr>
 
     <tr style="background-color:#caf0f8;height:70px;">
-      <th>Waist Size</th>
+      <th>Waist Size (cm)</th>
       <td>
         <div class="user-box">
         <input type="number" step="0.01" name="waist" required="" style="height:50px;">
@@ -710,7 +710,7 @@ if (!$con) {
     </tr>
 
     <tr style="background-color:#caf0f8;height:70px;">
-      <th>Hip Size</th>
+      <th>Hip Size (cm)</th>
       <td>
         <div class="user-box">
         <input type="number" step="0.01" name="hip" required="" style="height:50px;">
@@ -719,7 +719,7 @@ if (!$con) {
     </tr>
 
     <tr style="background-color:#caf0f8;height:70px;">
-      <th>Weight</th>
+      <th>Weight (kg)</th>
       <td>
         <div class="user-box">
         <input type="number" step="0.01" name="weight" required="" style="height:50px;">
@@ -728,7 +728,7 @@ if (!$con) {
     </tr>
 
     <tr style="background-color:#caf0f8;height:70px;">
-      <th>Height</th>
+      <th>Height (m)</th>
       <td>
         <div class="user-box">
         <input type="number" step="0.01" name="height" required="" style="height:50px;">

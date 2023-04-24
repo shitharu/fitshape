@@ -124,7 +124,7 @@ $path = "PicZ/";
 
 			<div class="user-box">
 				<input type="number" name="age" required="">
-				<label>Age</label>
+				<label>Age (years)</label>
 			</div><br>
 
 			<div class="form-label">Choose Image :</label>
@@ -142,32 +142,32 @@ $path = "PicZ/";
 
 			<div class="user-box">
 				<input type="number" step="0.01" name="shoulder" required="">
-				<label for="float-data">Your Shoulder Size</label>
+				<label for="float-data">Your Shoulder Size (cm)</label>
 			</div><br>
 
 			<div class="user-box">
 				<input type="number" step="0.01" name="bust" required="">
-				<label for="float-data">Your Bust Size</label>
+				<label for="float-data">Your Bust Size (cm)</label>
 			</div><br>
 
 			<div class="user-box">
 				<input type="number" step="0.01" name="waist" required="">
-				<label for="float-data">Your Waist Size</label>
+				<label for="float-data">Your Waist Size (cm)</label>
 			</div><br>
 
 			<div class="user-box">
 				<input type="number" step="0.01" name="hip" required="">
-				<label for="float-data">Your Hip Size</label>
+				<label for="float-data">Your Hip Size (cm)</label>
 			</div><br>
 
 			<div class="user-box">
 				<input type="number" step="0.01" name="weight" required="">
-				<label for="float-data">Your Weight</label>
+				<label for="float-data">Your Weight  (kg)</label>
 			</div><br>
 
 			<div class="user-box">
 				<input type="number" step="0.01" name="height" required="">
-				<label for="float-data">Your Height</label>
+				<label for="float-data">Your Height (m)</label>
 			</div><br><br>
 
 			<br><h3 align="center">Login Ditails</h3><br><br>

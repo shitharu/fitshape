@@ -507,8 +507,6 @@ textarea:focus, input:focus{
 <li class="li" style="padding-right: 50px;"><a href="Home.html">Home</a></li>
 <li class="li"><a href="About Us.html">About Us</a></li>
 <li class="li"><a href="index.php">Login</a></li>
-<li class="li"><a href="x.php">Body Shape Analyzer</a></li>
-<li class="li"><a href="feedbacks.php">Feedbacks</a></li>
 
 </ul>
 
@@ -519,10 +517,11 @@ textarea:focus, input:focus{
 
 <br><br>
     <ul>
-          <li><a href="profile.php" class="active">Profile</a></li>
-          <li><a href="viewallfeedbacksuser.php">User Feedbacks</a></li>
-          <li><a href="feedbacks.php">Add Feedback</a></li>
+          <li><a href="profile.php" class="active">Profile</a></li>          
           <li><a href="image_classification.php">AI Body Shape Analyzer</a></li>
+          <li><a href="viewallfeedbacksuser.php">View Feedbacks</a></li>
+          <li><a href="feedbacks.php">Add Feedback</a></li>
+          <li><a href="contact_us.php">Help</a></li>
     </ul>
   </div>
 </div>

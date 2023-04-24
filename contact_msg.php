@@ -16,7 +16,6 @@ if (!isset($_SESSION['email'])) {
 
 <style>
 
-
 body {
   font-family: "Lato", sans-serif;
   height: 100%;
@@ -483,16 +482,16 @@ textarea:focus, input:focus{
   text-align: center;
   
 }
+
 </style>
 </head>
 
 <body>
 
-<h2><img src="images/logo/logo.png" width="70"height="65" style="float:right; margin-right:50px;margin-top:-10px">User Feedbacks</h2>
-
+<h2><img src="images/logo/logo.png" width="70"height="65" style="float:right; margin-right:50px;margin-top:-10px">ADMIN DASHBOARD</h2>
 
 <ul class="ul" >
-<li class="li" style="padding-right: 50px;"><a href="Home.html">Home</a></li>
+<li class="li"><a href="Home.html" style="padding-right: 50px;">Home</a></li>
 <li class="li"><a href="About Us.html">About Us</a></li>
 <li class="li"><a href="index.php">Login</a></li>
 
@@ -505,15 +504,21 @@ textarea:focus, input:focus{
 
 <br><br>
     <ul>
-          <li><a href="profile.php">Profile</a></li>          
-          <li><a href="image_classification.php">AI Body Shape Analyzer</a></li>
-          <li><a class="active" href="viewallfeedbacksuser.php">View Feedbacks</a></li>
-          <li><a href="feedbacks.php">Add Feedback</a></li>
-          <li><a href="contact_us.php">Help</a></li>
+            <li><a href="blankadmin.php">Admin Dashboard</a></li>
+            <li><a href="adminpp.php">Admin Profile</a></li>
+            <li><a href="registeradmin.php">Add an Admin</a></li>
+            <li><a href="adminprofile.php">View All Admins</a></li>
+            
+            <br><br><br><br>
+
+            <li><a href="add_user.php">Add User</a></li>
+            <li><a href="viewallusers.php">View All Users</a></li>
+            <li><a href="searchuser.php">Search User</a></li>
+            <li><a href="viewallfeedbacks.php">View All User Feedbacks</a></li>
+            <li><a class="active" href="contact_msg.php">View All User Messages</a></li>
     </ul>
   </div>
 </div>
-
 
 <?php
 
@@ -531,20 +536,22 @@ if (!$con) {
 ?>
 
      <?php
-            $sql="SELECT * FROM feedbacks";
+            $sql="SELECT * FROM contact_us";
             $result = mysqli_query($con,$sql);
      ?>
 
 <br>
 
 <div class="tableFixHead">
-<table class="table1" id="myTable" style="margin-left:20%; width:80%;" >
+<table class="table1" id="myTable" style="margin-left:20%;width:80%;" >
 	<thead>
 <tr style="background-color:#caf0f8;height:70px;">
 	<th>ID</th>
     <th>Name</th>
-    <th>Feedback</th>
-    <th>Mood</th>
+    <th>Emails</th>
+    <th>Subject</th>
+    <th>Message</th>
+
 
 	</tr>
 	</thead>
@@ -558,8 +565,9 @@ if (!$con) {
 					<tr style="background-color:#caf0f8">
 					<td class="td"><?php echo $row['id']; ?></td>
 					<td class="td"><?php echo $row['name']; ?></td>
-					<td class="td"><?php echo $row['feedback']; ?></td>
-          <td class="td"><?php echo $row['mood']; ?></td>
+					<td class="td"><?php echo $row['email']; ?></td>
+                    <td class="td"><?php echo $row['subject']; ?></td>
+                    <td class="td"><?php echo $row['msg']; ?></td>
 					</tr>	
                 
 		<?php		}
