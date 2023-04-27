@@ -17,7 +17,6 @@ $name = ""; $email = ""; $telno=""; $username = "";
     if(isset($_POST['btnSUBMIT'])){
 
 		$name = $_POST['name'];
-		$email = $_POST['email'];
 		$telno = $_POST['telno'];
 		$username = $_POST['username'];
 
@@ -25,7 +24,7 @@ $name = ""; $email = ""; $telno=""; $username = "";
 		$password = $_POST['password'];
 		$re_password = $_POST['re_password'];
 
-        if(empty($name)||empty($email)||empty($telno)||empty($username)||empty($email)||
+        if(empty($name)||empty($telno)||empty($username)||empty($email)||
                 empty($password)||empty($re_password)){
             
                   echo "<script>alert('Filed can not be Empty!.')</script>";
@@ -86,11 +85,6 @@ body {
 			</div><br>
 
 			<div class="user-box">
-				<input type="email" name="email" required="">
-				<label>Email</label>
-			</div><br>
-
-			<div class="user-box">
 				<input type="telno" name="telno" required="">
 				<label>Contact Number</label>
 			</div><br>
@@ -105,6 +99,11 @@ body {
 			<h3 align="center">Login Ditails</h3><br><br>
 
 	
+			<div class="user-box">
+				<input type="email" name="email" required="">
+				<label>Email</label>
+			</div><br>
+
 			<div class="user-box">
 				<input type="password" name="password" required="">
 				<label>Password</label>

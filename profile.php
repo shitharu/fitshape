@@ -575,19 +575,19 @@ if (!$con) {
     </tr>
     <tr style="background-color:#caf0f8;height:70px;">
       <th>Shoulder</th>
-      <td><?php echo $row['shoulder']; ?> inch</td>
+      <td><?php echo $row['shoulder']; ?> cm</td>
     </tr>
     <tr style="background-color:#caf0f8;height:70px;">
       <th>Bust</th>
-      <td><?php echo $row['bust']; ?> inch</td>
+      <td><?php echo $row['bust']; ?> cm</td>
     </tr>
     <tr style="background-color:#caf0f8;height:70px;">
       <th>Waist</th>
-      <td><?php echo $row['waist']; ?> inch</td>
+      <td><?php echo $row['waist']; ?> cm</td>
     </tr>
     <tr style="background-color:#caf0f8;height:70px;">
       <th>Hip</th>
-      <td><?php echo $row['hip']; ?> inch</td>
+      <td><?php echo $row['hip']; ?> cm</td>
     </tr>
     <tr style="background-color:#caf0f8;height:70px;">
       <th>Weight</th>

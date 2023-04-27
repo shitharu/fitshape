@@ -543,19 +543,13 @@ if(isset($_POST['btnSearch'])){
 
             $usernamee = $row[0];
             $age = $row[2];
-
-
             $Image = $row[4];
-
-
             $country = $row[5];
             $date = $row[6];
-
             $shoulder = $row[7];
             $bust = $row[8];
             $waist = $row[9];
             $hip = $row[10];
-
             $weight = $row[11];
             $height = $row[12];
 
