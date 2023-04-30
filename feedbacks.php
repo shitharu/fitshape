@@ -49,7 +49,7 @@ $name = ""; $feedback = ""; $mood = "";
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Feedback Form</title>
+	<title>Feedback Form (Registered)</title>
     <link rel="icon" href="images/logo/logo.png">
 	<link rel="stylesheet" type="text/css" href="registercss.css">
 
@@ -60,6 +60,11 @@ $name = ""; $feedback = ""; $mood = "";
 
 <style>
 
+body {
+	font-family: "Lato", sans-serif;
+	background-size:cover;
+	background-image: url("https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-56228.jpg?w=826&t=st=1682794873~exp=1682795473~hmac=d73405c7d47f78db6f22c90ef31fec858974c57c604d64cb335fb31113c8d6c4");
+}
 
 </style>
 

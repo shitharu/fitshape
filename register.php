@@ -94,7 +94,7 @@ $path = "PicZ/";
 					echo "<script>alert('Password is wrong')</script>";
 				}
 			}else{
-				echo "<script>alert('For you to register in this system,<br> your age should be between 10 and 120 years.')</script>";
+				echo "<script>alert('For you to register in this system, your age should be between 10 and 120 years.')</script>";
 			}  
         }        
     }
@@ -110,6 +110,15 @@ $path = "PicZ/";
 	<title>User Registration Page</title>
 	<link rel="stylesheet" type="text/css" href="registercss.css">
 	<link rel="icon" href="images/logo/logo.png">
+
+	<style>
+	  body {
+			font-family: "Lato", sans-serif;
+			background-size:cover;
+			background-image: url("https://images.pexels.com/photos/2680270/pexels-photo-2680270.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+			}
+	</style>
+
 </head>
 <body>
 	<div class="registration-box">

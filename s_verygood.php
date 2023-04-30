@@ -1,28 +1,7 @@
-<?php
-session_start();
- 
-// Redirect to the login page if the user is not logged in
-if (!isset($_SESSION['username'])) {
-  header('Location: login.php');
-  exit;
-}
-
-
-$db = new mysqli('localhost', 'root', '', 'fitshape');
-
-// Retrieve the user's details from the database
-$username = $_SESSION['username'];
-$query = "SELECT * FROM admin_login WHERE username = '$username'";
-$result = $db->query($query);
-$row = $result->fetch_assoc();
-?>
- 
-
-
 <html>
 
 <head>
-    <title>Admin Dashboard</title>
+    <title>Very Good Feedbacks</title>
     <link rel="icon" href="images/logo/logo.png">
 
 <style>
@@ -59,11 +38,11 @@ body {
      div.dropdown-vertically ul {
       list-style: none;
       background:#a1caf1;
-      font-size:16px;
+      font-size:16px;      
      }
 	 
      div.dropdown-vertically li {
-      position:relative;
+      position:relative;      
      }
 	 
      div.dropdown-vertically a { 
@@ -71,7 +50,7 @@ body {
       text-decoration:none;
       padding:10px;
       color: #feffff;
-      text-align: center; 
+      text-align: center;       
      }
 	
      div.dropdown-vertically li:hover > a {
@@ -113,7 +92,7 @@ body {
   padding-right: 8px;
 }
 
-@media screen and (max-height: 450px) {
+@media screen and (max-height: 450px;) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
@@ -188,26 +167,21 @@ h2{
     }
 
   h1{
-   
     margin-top: 100px;  
     text-align: center;
     width:20px;
   }  
 
   h6{
-   
    margin-top: 10px;  
    text-align: center;
  }  
 
- h5{
-   
+ h5{ 
    margin-top: -19px;  
    text-align: center;
    color: #feffff;
  } 
-
-
   .success {
    background: #D4EDDA;
    color: #40754C;
@@ -387,7 +361,7 @@ input[type=submit]:hover {
 
 .tableFixHead {
 		overflow-y: auto;
-		height: 570px;
+		height: 570px;  // table height 
 		width:97%;
        margin-left:10px;
 }
@@ -506,6 +480,13 @@ textarea:focus, input:focus{
 <li class="li"><a href="About Us.html">About Us</a></li>
 <li class="li"><a href="indexadmin.php">Login</a></li>
 
+<li class="li"><a href="viewallfeedbacks.php" style="padding-right: 180px;">ALL</a></li>
+<li class="li"><a href="s_bad.php">BAD</a></li>
+<li class="li"><a href="s_notbad.php">NOT BAD</a></li>
+<li class="li"><a href="s_good.php">GOOD</a></li>
+<li class="li"><a class="active" href="s_verygood.php">VERY GOOD</a></li>
+<li class="li"><a href="s_satisfied.php">SATISFIED</a></li>
+
 </ul>
 
 <div class="sidenav">
@@ -515,16 +496,15 @@ textarea:focus, input:focus{
 
 <br><br>
     <ul>
-          <li><a class="active" href="blankadmin.php">Admin Dashboard</a></li>
+          <li><a href="blankadmin.php">Admin Dashboard</a></li>
           <li><a href="adminpp.php">Admin Profile</a></li>
           <li><a href="registeradmin.php">Add an Admin</a></li>
           <li><a href="adminprofile.php">View All Admins</a></li>
-          <li><a href="searchadmin.php">Search Admin</a></li>
           
           <br><br><br><br>
 
           <li><a href="add_user.php">Add User</a></li>
-          <li><a href="viewallusers.php">View All Users</a></li>
+          <li><a class="active" href="viewallusers.php">View All Users</a></li>
           <li><a href="searchuser.php">Search User</a></li>
           <li><a href="viewallfeedbacks.php">View All User Feedbacks</a></li>
           <li><a href="contact_msg.php">View All User Messages</a></li>
@@ -532,6 +512,65 @@ textarea:focus, input:focus{
     </ul>
   </div>
 </div>
+
+<?php
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "fitshape";
+
+$con = mysqli_connect($servername, $username, $password, $dbname);
+
+if (!$con) {
+	die("Connection failed: " . mysqli_connect_error());
+}
+    
+?>
+
+     <?php
+            $sql="SELECT * FROM feedbacks WHERE mood='Very Good'";
+            $result = mysqli_query($con,$sql);
+     ?>
+
+<br>
+
+<div class="tableFixHead">
+<table class="table1" id="myTable" style="margin-left:20%;width:80%;" >
+	<thead>
+<tr style="background-color:#caf0f8;height:70px;">
+    <th>id</th>
+    <th>Name</th>
+    <th>Feedback</th>
+    <th>Mood</th>
+
+	</tr>
+	</thead>
+	<tbody>	
+		<?php
+			if ($result->num_rows > 0) {
+				
+				while ($row = $result->fetch_assoc()) {
+                    
+		?>
+
+					<tr style="background-color:#caf0f8">
+                        <td class="td"><?php echo $row['id']; ?></td>
+                        <td class="td"><?php echo $row['name'];?></td>
+                        <td class="td"><?php echo $row['feedback']; ?></td>
+                        <td class="td"><?php echo $row['mood']; ?></td>
+                        
+					</tr>	
+                
+		<?php		}
+    
+			}
+		?>
+	        	
+	</tbody>
+</table>
+	</div>
+
 
 </body>
 </html>

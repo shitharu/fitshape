@@ -49,7 +49,7 @@ $name = ""; $feedback = ""; $mood = "";
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Feedback Form</title>
+	<title>Feedback Form (Normal)</title>
     <link rel="icon" href="images/logo/logo.png">
 	<link rel="stylesheet" type="text/css" href="registercss.css">
 
@@ -59,7 +59,11 @@ $name = ""; $feedback = ""; $mood = "";
 </head>
 
 <style>
-
+body {
+			font-family: "Lato", sans-serif;
+			background-size:cover;
+			background-image: url("https://cdn5.f-cdn.com/contestentries/1578585/21468461/5d62b49ac544b_thumb900.jpg");
+			}
 
 </style>
 

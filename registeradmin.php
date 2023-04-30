@@ -44,7 +44,7 @@ $name = ""; $email = ""; $telno=""; $username = "";
 	
 					}else{
 	
-					   echo "<script>alert('Your details not inserted.Try Again.')</script>";
+					   echo "<script>alert('Your details not inserted. Try Again.')</script>";
 					}
 				
 			}

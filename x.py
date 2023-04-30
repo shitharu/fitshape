@@ -18,6 +18,6 @@ preds = model.predict(x)
 pred_class = np.argmax(preds)
 
 # Print the predicted class
-classes = ['hourglass', 'inverted triangle', 'pear', 'rectangle', 'spoon']
+classes = ['hour glass', 'inverted triangle', 'pe ar', 'rec tangle', 's poon']
 print(classes[pred_class])
 

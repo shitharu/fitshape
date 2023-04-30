@@ -11,15 +11,15 @@ if (!isset($_SESSION['username'])) {
 <html>
 
 <head>
-    <title>View All Feedbacks</title>
+    <title>Contact Messages</title>
     <link rel="icon" href="images/logo/logo.png">
 
 <style>
 
 body {
   font-family: "Lato", sans-serif;
-  height: 100%;
-  width: 100%;
+  background-size:cover;
+  background-image: url("https://images.pexels.com/photos/370799/pexels-photo-370799.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 }
 
 .sidenav {
@@ -566,11 +566,11 @@ if (!$con) {
 		?>
 
 					<tr style="background-color:#caf0f8">
-					<td class="td"><?php echo $row['id']; ?></td>
-					<td class="td"><?php echo $row['name']; ?></td>
-					<td class="td"><?php echo $row['email']; ?></td>
-                    <td class="td"><?php echo $row['subject']; ?></td>
-                    <td class="td"><?php echo $row['msg']; ?></td>
+              <td class="td"><?php echo $row['id']; ?></td>
+              <td class="td"><?php echo $row['name']; ?></td>
+              <td class="td"><?php echo $row['email']; ?></td>
+              <td class="td"><?php echo $row['subject']; ?></td>
+              <td class="td"><?php echo $row['msg']; ?></td>
 					</tr>	
                 
 		<?php		}

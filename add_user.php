@@ -67,32 +67,32 @@ $path = "PicZ/";
             
                   echo "<script>alert('Filed can not be Empty!.')</script>";
         }else{
-			if(10 < $age && $age < 120){
-				if($password==$re_password){
-					if(in_array(strtolower($ext[1]),$arrType)){
-					
-						$sql="INSERT INTO user_details (username, age, image, country, date, shoulder, bust, waist, hip,
-										weight, height, email, password, body_shape) 
-								VALUES ('".$username."', ".$age.", '".$Image."', '".$country."', '".$date."', 
-										".$shoulder.", ".$bust.", ".$waist.", ".$hip.", ".$weight.", ".$height.",
-										'".$email."', '".$re_password."', '".$body_shape."')";
-		
-						if(mysqli_query($conn,$sql)){
-							move_uploaded_file($temp_name,$Image);
-		
-							echo "<script>alert('Your details inserted!.')</script>";	
-														
-						}else{
-		
-						   echo "<script>alert('Your details not inserted.Try Again.')</script>";
-						}
-					}
-				}else{
-					echo "<script>alert('Password is wrong')</script>";
-				}
-			}else{
-				echo "<script>alert('For you to register in this system,<br> your age should be between 10 and 120 years.')</script>";
-			}  
+          if(10 < $age && $age < 120){
+            if($password==$re_password){
+              if(in_array(strtolower($ext[1]),$arrType)){
+              
+                $sql="INSERT INTO user_details (username, age, image, country, date, shoulder, bust, waist, hip,
+                        weight, height, email, password, body_shape) 
+                    VALUES ('".$username."', ".$age.", '".$Image."', '".$country."', '".$date."', 
+                        ".$shoulder.", ".$bust.", ".$waist.", ".$hip.", ".$weight.", ".$height.",
+                        '".$email."', '".$re_password."', '".$body_shape."')";
+        
+                if(mysqli_query($conn,$sql)){
+                  move_uploaded_file($temp_name,$Image);
+        
+                  echo "<script>alert('User details inserted!.')</script>";	
+                                
+                }else{
+        
+                  echo "<script>alert('User details not inserted.Try Again.')</script>";
+                }
+              }
+            }else{
+              echo "<script>alert('Password is wrong')</script>";
+            }
+          }else{
+            echo "<script>alert('For the register with this system, age should be between 10 and 120 years.')</script>";
+          }  
         }        
     }
 
@@ -106,7 +106,7 @@ $path = "PicZ/";
 <html>
 
 <head>
-    <title>User Registration Page</title>
+    <title>User Registration Page (Admin)</title>
     <link rel="icon" href="images/logo/logo.png">
 
 <style>

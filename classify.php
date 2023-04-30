@@ -1,10 +1,16 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
-	<title>YOUR BODY SHAPE</title>
-	<style>
+	<title>Predicted Body Shape</title>
+	<link rel="icon" href="images/logo/logo.png">
+
+<style>
+		body {
+			font-family: "Lato", sans-serif;
+			background-size:cover;
+			background-image: url("https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-56228.jpg?w=826&t=st=1682794873~exp=1682795473~hmac=d73405c7d47f78db6f22c90ef31fec858974c57c604d64cb335fb31113c8d6c4");
+		}
+
 		body {
 			font-family: Arial, sans-serif;
 			background-color: #f2f2f2;
@@ -61,49 +67,40 @@
                 $target_dir = "classification_images/";
                 $target_file = $target_dir . basename($_FILES["image"]["name"]);
 
-
                 $ext = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
                 if ($ext === 'jpg' || $ext === 'jpeg' || $ext === 'png') {
-
                     move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
 
                     // Call the Python script to make predictions on the uploaded image
                     $command = escapeshellcmd("python x.py " . $target_file);
                     $output = shell_exec($command);
 
-                    // Display the predicted class
-                    //echo "<h2>Predicted body shape: <br>" . $output . "body shape</h2>";
-					//print($output);
-
-
 					$last_word = explode(" ", trim($output));	// Split the output into an array of words
 					$last_word = end($last_word);		// Get the last word in the $output variable
 
-					//print($last_word);
-
 					// Check the value of the last word and redirect to the appropriate HTML file
-					if ($last_word == "hourglass") {
-					header("Location: Hourglass_Body_Shape_Dress.html");
-					} elseif ($last_word == "triangle") {
-					header("Location: Inverted_Tringle_Body_Shape_Dress.html");
-					} elseif ($last_word == "pear") {
-					header("Location: Pear_Body_Shape_Dress.html");
-					} elseif ($last_word == "rectangle") {
-					header("Location: Rectangle_Body_Shape_Dress.html");
-					} elseif ($last_word == "spoon") {
-					header("Location: Spoon_Body_Shape_Dress.html");
+					if ($last_word == "glass") {		// hourglass
+						header("Location: Hourglass_Body_Shape_Dress.html");
+					} elseif ($last_word == "triangle") {	// inverted triangle
+						header("Location: Inverted_Tringle_Body_Shape_Dress.html");
+					} elseif ($last_word == "ar") {		// pear
+						header("Location: Pear_Body_Shape_Dress.html");
+					} elseif ($last_word == "tangle") {		// rectangle
+						header("Location: Rectangle_Body_Shape_Dress.html");
+					} elseif ($last_word == "poon") {		// spoon
+						header("Location: Spoon_Body_Shape_Dress.html");
 					} else {
 					// Handle the case where the last word does not match any of the expected values
-					echo "Invalid value for output.";
+						echo "<script>alert('Invalid value for output.!')</script>";	
 					}
 
                 } else {
-                    echo 'Invalid file format. Only JPG, JPEG and PNG are allowed.';
+					echo "<script>alert('Invalid file format. Only JPG, JPEG and PNG are allowed!')</script>";	
                 }
  
             } else {
-                echo "<h2>Error uploading image</h2>";
+				echo "<script>alert('Error uploading image!')</script>";	
             }
         ?>
 

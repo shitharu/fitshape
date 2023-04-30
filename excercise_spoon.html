@@ -1,7 +1,7 @@
 <html>
 <head>
 
-    <title>Rectangle Body Shape About</title>
+    <title>Exercieses - Spoon</title>
     <link rel="icon" href="images/logo/logo.PNG">
 
 
@@ -113,10 +113,10 @@
 
  .logo {
 	float: left;
-  width: 120px;
-  margin-left: 20px;
-  margin-top:-5px;;
-}
+    width: 120px;
+    margin-left: 20px;
+    margin-top:-5px;;
+    }
 .logo img {
 	width: 100%;
 	padding: 15px 0;
@@ -256,31 +256,92 @@
 
  .background1
   {
-    background:url('https://cdn.pixabay.com/photo/2020/05/18/11/00/white-light-abstract-5185696_960_720.png');
-    background-size:cover;
-    width: 100%; height: auto;  
-  
-  }
-
-  .button {
-    transition-duration: 0.4s;
+    background-color: rgb(219, 133, 150);
     
-    border: none;
-    color: rgb(0, 0, 0);
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    width: 270px;
-    height: 50px;
-
+    width: 100%; 
+    margin-top:130px; 
   }
 
-  .button:hover {
-    background-color: #ff9d42;
-    color: white;
+  .ul{
+    padding-left: 70px;
+    padding-right: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: left;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 140%;
   }
+
+  .topic{
+    font-size: 40px;
+    font-style: bold;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .p{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 140%;
+  }
+
+  .excercise-container{
+    background-color:rgb(241, 222, 204);
+     
+  }
+
+  table, th, td {
+    padding-left: 120px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: justify;
+    border: 1px solid;
+    
+    }
+
+    .center {
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    .h1{
+      padding-top: 100px;
+    }
+
+    .p2{
+    
+    padding-top: 10px;
+    padding-bottom: 20px;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 140%;
+  }
+
+    .excercise{
+        height: 420px;
+        width: 100%;
+    }
+
+    .ex-image{
+        height: 2560px;
+        width: 632px;
+    }
+
+    .about-section {
+        padding: 50px;
+        text-align: center;
+        background:url('https://wallpaper.dog/large/112744.jpg');
+        width: 100%;
+        height: 400;
+        }
+
 
 </style>
 
@@ -290,56 +351,53 @@
 
 <div class="header" style="margin-top: 0;">
 
-<div class="background"style="margin-top:0px;">
-<img src="images/Rectangle_about/dressbarn_Blog_HowToDressForBodyShape_Rectangle_Header.webp" width="100%;margin-top:130px;">
+<div class="background" style="margin-top:0px;">
+<img src="https://wallpaper.dog/large/112744.jpg" class="excercise; about-section">
 
 
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
-      <div class="container">
+    <div class="container">
 
         <header>
-          <div class="navbar" id='nav'>
-              <div class="logo">
-                  <img src="images/logo/logo.PNG" alt="" style="margin-left:-200px;">
-              </div>
-              <ul class="nav-area">
-                <li><a class="active" href="Home.html"><b>Home</b></a></li>
-                <li><a href="About Us.html"><b>About Us</b></a></li>
-                <li><a href="index.php"><b>Login</b></a></li>
-                <li><a href="bs_calculator.php"><b>Calculator</b></a></li>
-                <li><a href="index.php"><b>BodyShape Analyzer</b></a></li>
-                <li style="margin-right:120px;"><a href="feedbacks_normal.php"><b>Feedbacks</b></a></li>
-              </ul>
-             </div>
-          
-          </div>
-          <br>
-          </header>     
-    
-    </nav>
-  </div></div>
+            <div class="navbar" id='nav'>
+                <div class="logo">
+                    <img src="images/logo/logo.PNG" alt="" style="margin-left:-200px;">
+                </div>
+                <ul class="nav-area">
+                  <li><a href="Home.html"><b>Home</b></a></li>
+                  <li><a href="About Us.html"><b>About Us</b></a></li>
+                  <li><a href="index.php"><b>Login</b></a></li>
+                  <li><a href="bs_calculator.php"><b>Body Shape Calculator</b></a></li>
+                  <li style="margin-right:120px;"><a href="feedbacks_normal.php"><b>Feedback</b></a></li>
+                </ul>
+              </div>  
+        </header>     
+    </div>
+</nav>
+</div>
+</div>
 
   <script type="text/javascript">
      
     var  nav = document.getElementById('nav');
     
-    window.onscroll = function(){
+        window.onscroll = function(){
 
-      if (window.pageYOffset >100) {
+        if (window.pageYOffset >100) {
 
-        nav.style.background = "white";
-        nav.style.boxShadow = "0px 2px 2px white";
-        nav.style.height="80px";
-        nav.style.paddingTop="15px";
-        nav.style.opacity=".7";
-      }
-      else{
-       nav.style.background = "transparent";
-        nav.style.boxShadow = "none";
-      }
-    }
+            nav.style.background = "white";
+            nav.style.boxShadow = "0px 2px 2px white";
+            nav.style.height="80px";
+            nav.style.paddingTop="15px";
+            nav.style.opacity=".7";
+        }
+        else{
+        nav.style.background = "transparent";
+            nav.style.boxShadow = "none";
+        }
+        }
 
-</script> 
+    </script> 
 
 
    <script src="js/bootstrap.bundle.min.js"></script>
@@ -359,89 +417,64 @@
      });
    </script>     
 
-
-
-
-
 </div>
-<br><br><br><br><br>				
+	
+
 <div class="background1">
-	<div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto text-center">
-                <h1 style="font-family:'Trajan Pro'; color:#000000; margin-top:50px;">
+  
+            <div class="col-lg-10 mx-auto text-center margin-left:5px; margin-right:50px;">
+              <h1 class="h1" style="font-family:'Trajan Pro'; color:#000000; margin-top:-450px;">
                     
-                  <b>RECTANGLE BODY SHAPE</b></h1>
-                  <a href="excercise_rectangle.html" class="btn btn-primary" style="justify-content:center; height:50px; width:500px; font-size: 20px; color: #000;">
-                    <b>Exercieses for Rectangle Body Shape</b></a>            
+
+                  <b>Exercieses for Spoon Body Shape</b></h1> 
                   
-                    <hr class="my-5">
-                    <h4 class="mb-5" style="font-family: 'Tekton Pro';">
+                  <br><br><br><br><br><br><br><br>
+                    
+                    <h4 class="mb-1" style="font-family: 'Tekton Pro';">
+   
+                        <table style="width:100%;text-align:center;">
+                            <tr>
+                            <td><br>
+                              <h2><b>Workout guide for Spoon body shape:</b></h2>
+                                <div class="p">
+                                  <ui>
+                                      <li><b>Spoons should go easy on the weights, as these tend to add girth to the lower body.</b>	</li> <br>
+                                      <li><b>Instead, go for whole body exercises like skipping and brisk walking.</b></li><br>
+                                      <li><b>To build muscle on your upper body, try the bench press or push-ups.</b></li><br>
+                                      <li><b>Leg lifts are a good idea to tone your legs—one leg and side leg lifts both.</b></li><br>
+                                      <li><b>Ashtanga yoga is your friend.</b></li><br>
+                                      <li><b>Practice it for at least an hour every alternate day.</b></li><br>
+                                  </ui>
+                                </div>
 
-                      If your body isn't on the curvy side and your shoulders and hips are approximately the same measurements, you're likely a "Rectangle Body Shape".
+                            </td>
+                            </tr>
+                        </table>
+
+                        <br>
+
+                        <table style="width:100%;text-align:center;">
+                          <tr>
+                          <td><br>
+                            <h2><b>Diet guide for Spoon body shape:</b></h2>
+                              <div class="p">
+                                <ui>
+                                    <li><b>Eliminate saturated fats from your diet, and other stuff that goes straight to the tummy.</b>	</li> <br>
+                                    <li><b>Instead, opt for natural sources of fat like dairy, dry fruits and baked snacks instead of fried ones.</b></li><br>
+                                    <li><b>Lean proteins—white meat, leafy green veggies and lentils—are a must-have.</b></li><br>
+                                    <li><b>Eat plenty of salads, but avoid too many sweet fruits; just one portion a day will do.</b></li><br>
+                                </ui>
+                              </div>
+
+                          </td>
+                          </tr>
+                      </table>
+
                       <br><br>
-                      A rectangle is sometimes called a "Banana Body Shape" or a straight body shape. 
-                      You may have an athletic build, or you may be a rectangular body shape in size, but the common characteristic of a rectangle is that the shoulders and hips are about the same width apart.
-                      <br><br>
-                      The Rectangular Body Shape is sometimes called the ruler or straight body shape. 
-                      With a Rectangular Body Shape type, your waist circumference is more than 25% smaller than your shoulders or bust.
-                      <br><br>
-                      You have a narrow frame and may be flat in the chest and chest.
-                      With a Rectangular Body Shape, you carry weight proportionally but can carry weight around your abdomen.
-                      <br><br>
-                      Many long-distance runners and dancers have this shape.
-                      Although you generally look lean, you may struggle to build lean muscle.
-                      This can sometimes slow down your metabolism.
-                      <br><br>
-                      However, join hands with us to look great and feel great.
-                      If you're wondering how to draw an "Rectangle Body Shape" to boost your confidence, look no further.
-                      Use the <a href="Home.html">FitShape.lk</a> website.
-
-                      <br><br><br><br>
-
-                      <b><u>Rectangle Body Shaped Celebrities:</u></b>
-                      <br><br>
-
-                      Kate Hudson<br>
-                      Reese Witherspoon<br>
-                      Queen Latifah<br>
-                      Anne Hathaway<br>
-
-                      <br>
-                      <img src="images/Rectangle_about/famous-rectangles-720x540.png" height="400px" width="630px">
-                      
-                      <br><br>
-
-                      <b>For Your Styles ...</b>
-                      <br><br>
-
-                      Choosing the <a href="index.php">best women's clothing for your Rectangle Body Shape</a> can help you feel more confident inside and out.
-                      <br><br>
-                      So, if our body shape quiz gave you this result, now's the time to dive into the clothes and accessories that will help you look and feel your best!
-                      <br>Let's get started!
-                      <br><br><br><br>
-
-                      <b>Are Your Looking For Any Other Body Shape ?</b>
-
-            </div>
-        </div>
-                		
-</div>
-</div>
-
+            </div>            	   
 </div>
 
 
-
-<table style="width:10%;text-align:center;">
-  <tr>
-  <td><form action="Rectangle_About.html"><button class="button"><b>RECTANGLE</b></button></form></td>
-  <td><form action="Inverted_Tringle_About.html"><button class="button"><b>INVERTED RECTANGLE</b></button></form></td>
-  <td><form action="Hourglass_About.html"><button class="button"><b>HOURGLASS</b></button></form></td>
-  <td><form action="Pear_About.html"><button class="button"><b>PEAR</b></button></form></td>
-  <td><form action="Spoon_About.html"><button class="button"><b>SPOON</b></button></form></td>
-  </tr>
-</table>
 
 <div class="footer-dark">
         <footer>
@@ -476,10 +509,10 @@
                     <table style="width:10%;text-align:center;margin-left:480px;">
                      
                       <tr>
-                      <td><a href="#"><i class="icon ion-social-instagram " style="color:#264653; border:20px;padding-right:10px" ></i></a></td>
-                      <td><a href="#"><i class="icon ion-social-snapchat"style="color:#264653; border:20px;padding-right:10px" ></i></a></td>
-                      <td><a href="#"><i class="icon ion-social-twitter"style="color:#264653; border:20px;padding-right:10px" ></i></a></td>
-                      <td><a href="#"><i class="icon ion-social-facebook"style="color:#264653; border:20px;padding-right:10px" ></i></a></td>
+                      <a href="#"><i class="icon ion-social-instagram " style="color:#264653; border:20px;padding-right:10px" ></i></a>
+                      <a href="#"><i class="icon ion-social-snapchat"style="color:#264653; border:20px;padding-right:10px" ></i></a>
+                      <a href="#"><i class="icon ion-social-twitter"style="color:#264653; border:20px;padding-right:10px" ></i></a>
+                      <a href="#"><i class="icon ion-social-facebook"style="color:#264653; border:20px;padding-right:10px" ></i></a>
                       </tr>
                     </table>
                 </div>

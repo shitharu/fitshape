@@ -11,15 +11,15 @@ if (!isset($_SESSION['username'])) {
 <html>
 
 <head>
-    <title>View All Feedbacks</title>
+    <title>View All Feedbacks (Admin)</title>
     <link rel="icon" href="images/logo/logo.png">
 
 <style>
 
 body {
   font-family: "Lato", sans-serif;
-  height: 100%;
-  width: 100%;
+  background-size:cover;
+  background-image: url("https://images.pexels.com/photos/370799/pexels-photo-370799.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 }
 
 .sidenav {
@@ -494,6 +494,16 @@ textarea:focus, input:focus{
 <li class="li"><a href="Home.html" style="padding-right: 50px;">Home</a></li>
 <li class="li"><a href="About Us.html">About Us</a></li>
 <li class="li"><a href="index.php">Login</a></li>
+
+
+<li class="li"><a class="active" href="viewallfeedbacks.php" style="padding-right: 180px;">ALL</a></li>
+<li class="li"><a href="s_bad.php">BAD</a></li>
+<li class="li"><a href="s_notbad.php">NOT BAD</a></li>
+<li class="li"><a href="s_good.php">GOOD</a></li>
+<li class="li"><a href="s_verygood.php">VERY GOOD</a></li>
+<li class="li"><a href="s_satisfied.php">SATISFIED</a></li>
+
+
 </ul>
 
 <div class="sidenav">

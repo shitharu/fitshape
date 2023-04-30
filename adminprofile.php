@@ -22,7 +22,7 @@ $row = $result->fetch_assoc();
 <html>
 
 <head>
-    <title>View All Feedbacks</title>
+    <title>View All Admins</title>
     <link rel="icon" href="images/logo/logo.png">
 
 <style>

@@ -528,7 +528,7 @@ if (!$con) {
 $usernamee = ""; $email = ""; $age = ""; $country = ""; $date = "";
 $shoulder = ""; $bust = ""; $waist = ""; $hip = "";
 $weight = ""; $height = "";
-$body_shape = ""; $xbody_shape = "";
+$body_shape = "";
 
 
 if(isset($_POST['btnSearch'])){
@@ -563,20 +563,9 @@ if(isset($_POST['btnSearch'])){
 
 
 
-
-
-
-
-
-
-
 if(isset($_POST['btnUpdate'])){
 
-        $email = $_POST['email']; // something wrong in this function
-
-        if(empty($email)){
-          echo "<script>alert('Filed can not be Empty!.')</script>";
-        }else{
+        $email = $_POST['email'];
 
         $usernamee = $_POST['username'];
         $age = $_POST['age'];
@@ -591,49 +580,51 @@ if(isset($_POST['btnUpdate'])){
         $weight = $_POST['weight'];
         $height = $_POST['height'];
 
-        $shoulder_to_hip_ratio = $shoulder / $hip;
-		    $bust_to_waist_ratio = $bust / $waist;
+          $shoulder_to_hip_ratio = $shoulder / $hip;
+          $bust_to_waist_ratio = $bust / $waist;
 
         if ($shoulder_to_hip_ratio < 0.8 && $bust_to_waist_ratio < 0.75) {
-          $xbody_shape = "Pear";
-          } elseif ($shoulder_to_hip_ratio > 1.25 && $bust_to_waist_ratio < 0.75) {
-          $xbody_shape = "Inverted Triangle";
-          } elseif ($shoulder_to_hip_ratio < 0.8 && $bust_to_waist_ratio >= 0.75 && $bust_to_waist_ratio <= 0.85) {
-          $xbody_shape = "Spoon";
-          } elseif ($shoulder_to_hip_ratio >= 0.8 && $shoulder_to_hip_ratio <= 1.25 && $bust_to_waist_ratio >= 0.75 && $bust_to_waist_ratio <= 0.85) {
-          $xbody_shape = "Rectangle";
-          } else {
-          $xbody_shape = "Hourglass";
-          }
-          
-
-          if(empty($email)||empty($usernamee)||empty($age)||empty($country)||empty($date)||
-                    empty($shoulder)||empty($bust)||empty($waist)||empty($hip)||
-            empty($weight)||empty($height)||empty($xbody_shape)){
-                
-                      echo "<script>alert('Filed can not be Empty!.')</script>";
-          }
-          else{
-            //if(10 < $age && $age < 120){
-                  $sql ="UPDATE user_details SET (username, age, country, date, shoulder, bust, waist, hip,
-                                                    weight, height, body_shape) 
-                                                VALUES ('".$usernamee."', ".$age.", '".$country."', '".$date."', 
-                                                    ".$shoulder.", ".$bust.", ".$waist.", ".$hip.", ".$weight.", ".$height.",
-                                                     '".$xbody_shape."') WHERE email=".$email;
-
-
-
-
-
-            //}else{
-                 //   echo "<script>alert('For you to register in this system,<br> your age should be between 10 and 120 years.')</script>";
-                 echo "<script>alert('For you to register in this system,<br> your age should be between 10 and 120 years.')</script>";
-                }  
-            //}
-    
+          $body_shape = "Pear";
+        } elseif ($shoulder_to_hip_ratio > 1.25 && $bust_to_waist_ratio < 0.75) {
+          $body_shape = "Inverted Triangle";
+        } elseif ($shoulder_to_hip_ratio < 0.8 && $bust_to_waist_ratio >= 0.75 && $bust_to_waist_ratio <= 0.85) {
+          $body_shape = "Spoon";
+        } elseif ($shoulder_to_hip_ratio >= 0.8 && $shoulder_to_hip_ratio <= 1.25 && $bust_to_waist_ratio >= 0.75 && $bust_to_waist_ratio <= 0.85) {
+          $body_shape = "Rectangle";
+        } else {
+          $body_shape = "Hourglass";
         }
+          
+        if(10 < $age && $age < 120){
+               
+        $sql = "UPDATE user_details SET username = '$usernamee', age = '$age', country = '$country', date = '$date', shoulder = '$shoulder', bust = '$bust', waist = '$waist', hip = '$hip', weight = '$weight', height = '$height', body_shape = '$body_shape' WHERE email = '$email'";                  
+
+        if(mysqli_query($con,$sql)){
+              echo "<script>alert('User Details Updated successfully!')</script>";
+            }else{
+              echo "<script>alert('Error: ')</script>". mysqli_error($con);
+            }
+
+        } else{
+          echo "<script>alert('For you to register in this system,<br> your age should be between 10 and 120 years.')</script>";
+        } 
+ 
 }
-    
+
+
+if(isset($_POST['btnDelete'])){
+
+  $email = $_POST['email'];
+
+  $sql ="DELETE FROM user_details WHERE email='$email'";
+  
+  if(mysqli_query($con,$sql)){
+      echo "<script>alert('User deleted successfully!')</script>";
+  }else{
+      echo "<script>alert('Error deleting user: ')</script>". mysqli_error($con);
+   }
+}
+
 ?>
 
 <br>
@@ -647,11 +638,13 @@ if(isset($_POST['btnUpdate'])){
       <th>Email</th>
       <td>
         <div class="user-box">
-			<input type="email" name="email" required="" style="height:50px;" value="<?php echo $email; ?>">
+			    <input type="email" name="email" required="" style="height:50px;" value="<?php echo $email; ?>">
             <input type="submit" name="btnSearch" value="SEARCH" style="height:50px; width:100px;">
-            <input type="submit" name="btnUpdate" value="UPDATE" style="height:50px; width:100px;">
-            <input type="reset" name="btnCLEAR" value="CLEAR ALL" style="height:50px; width:100px;">   
-		</div>
+            <input type="submit" name="btnUpdate" value="UPDATE" style="background:blue; height:50px; width:100px;">
+            <input type="submit" name="btnDelete" value="DELETE" style="background:red; height:50px; width:100px;">
+            <input type="reset" name="btnReset" value="RESET" style="background:yellow; height:50px; width:100px;">  
+            <input type="submit" name="btnCLEAR" value="CLEAR ALL" style="background:gray; height:50px; width:100px;">    
+		    </div>
       </td>
     </tr>
 

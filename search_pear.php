@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>View All Feedbacks</title>
+    <title>Pear Users</title>
     <link rel="icon" href="images/logo/logo.png">
 
 <style>

@@ -549,6 +549,40 @@ if(isset($_POST['btnSearch'])){
         }
 }
 
+
+
+if(isset($_POST['btnUpdate'])){
+
+  $usernamee = $_POST['username'];
+
+  $telno = $_POST['telno'];
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+         
+  $sql = "UPDATE admin_login SET telno = '$telno', name = '$name', email = '$email' WHERE username = '$usernamee'";                  
+
+  if(mysqli_query($con,$sql)){
+        echo "<script>alert('Admin Details Updated successfully!')</script>";
+      }else{
+        echo "<script>alert('Error: ')</script>". mysqli_error($con);
+      }
+}
+
+
+if(isset($_POST['btnDelete'])){
+
+  $usernamee = $_POST['username'];
+
+  $sql ="DELETE FROM admin_login WHERE username='$usernamee'";
+
+    if(mysqli_query($con,$sql)){
+      echo "<script>alert('Admin deleted successfully!')</script>";
+    }else{
+      echo "<script>alert('Error deleting admin: ')</script>". mysqli_error($con);
+    }
+}
+
+
     
 ?>
 
@@ -563,11 +597,13 @@ if(isset($_POST['btnSearch'])){
       <th>Username</th>
       <td>
         <div class="user-box">
-			<input type="username" name="username" required="" style="height:50px;" value="<?php echo $usernamee; ?>">
+			    <input type="username" name="username" required="" style="height:50px;" value="<?php echo $usernamee; ?>">
             <input type="submit" name="btnSearch" value="SEARCH" style="height:50px; width:100px;">
-            <input type="submit" name="btnUpdate" value="UPDATE" style="height:50px; width:100px;">
-            <input type="reset" name="btnCLEAR" value="CLEAR ALL" style="height:50px; width:100px;">   
-		</div>
+            <input type="submit" name="btnUpdate" value="UPDATE" style="background:blue; height:50px; width:100px;">
+            <input type="submit" name="btnDelete" value="DELETE" style="background:red; height:50px; width:100px;">
+            <input type="reset" name="btnReset" value="RESET" style="background:yellow; height:50px; width:100px;">  
+            <input type="submit" name="btnCLEAR" value="CLEAR ALL" style="background:gray; height:50px; width:100px;">    
+		    </div>
       </td>
     </tr>
 

@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>View All Feedbacks</title>
+    <title>Inverted Triangle Users</title>
     <link rel="icon" href="images/logo/logo.png">
 
 <style>
