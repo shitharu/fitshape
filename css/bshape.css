@@ -29,6 +29,7 @@ body {
 .user-box {
 	position: relative;
 	margin-bottom: 25px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .user-box input {
