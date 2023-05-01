@@ -3,7 +3,7 @@ session_start();
  
 // Redirect to the login page if the user is not logged in
 if (!isset($_SESSION['email'])) {
-  header('Location: login.php');
+  header('Location: index.php');
   exit;
 }
 
@@ -639,7 +639,7 @@ if(isset($_POST['btnDelete'])){
     <tr style="background-color:#caf0f8;height:70px;">
       <th>Image</th>
       <td><br>
-        <img src="<?php echo $row['image']; ?>" alt="ff"style='height:350px;width:250;margin-bottom:20px;border-radius:20px;background-color:white;'></td>
+        <img src="<?php echo $row['image']; ?>" alt="ff"style='height:200px;width:200;margin-bottom:20px;border-radius:20px;background-color:white;'></td>
     </tr>
 
     <tr style="background-color:#caf0f8;height:70px;">

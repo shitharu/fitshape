@@ -3,7 +3,7 @@ session_start();
  
 // Redirect to the login page if the user is not logged in
 if (!isset($_SESSION['username'])) {
-  header('Location: login.php');
+  header('Location: indexadmin.php');
   exit;
 }
 
@@ -11,8 +11,8 @@ if (!isset($_SESSION['username'])) {
 $db = new mysqli('localhost', 'root', '', 'fitshape');
 
 // Retrieve the user's details from the database
-$username = $_SESSION['username'];
-$query = "SELECT * FROM admin_login WHERE username = '$username'";
+$usernamee = $_SESSION['username'];
+$query = "SELECT * FROM admin_login WHERE username = '$usernamee'";
 $result = $db->query($query);
 $row = $result->fetch_assoc();
 ?>

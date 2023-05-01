@@ -582,6 +582,11 @@ if(isset($_POST['btnDelete'])){
     }
 }
 
+if(isset($_POST['btnCLEAR'])){
+
+  $usernamee = ""; $telno = ""; $name = ""; $email = ""; 
+  }
+
 
     
 ?>

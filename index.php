@@ -17,45 +17,7 @@
 </head>
 <body>
 
-<?php
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "fitshape";
-
-$con = mysqli_connect($servername, $username, $password, $dbname);
-
-if (!$con) {
-	die("Connection failed: " . mysqli_connect_error());
-}
-
-$email = ""; $password = ""; 
-
-
-if(isset($_POST['submit'])){
-
-    $email = $_POST['email'];
-	$password = $_POST['password'];
-
-		$sql = "SELECT * FROM user_details WHERE email='$email' and password='$password'";
-
-        //$sql = "SELECT * FROM admin_login WHERE username LIKE '%$usernamee%'";
-        	$result = mysqli_query($con, $sql);
-			$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-			$count = mysqli_num_rows($result);
-
-			if ($count == 1) {
-				$_SESSION['email'] = $email;
-				echo "<script>alert('Login Successful !')</script>";			
-				header("location: profile.php");
-			} else {
-				echo "<script>alert('Check Your Email and Password Again !')</script>";	
-				//header("location: index.php");
-			}
-}
-
-?>
 
 	<div class="login-box">
 		<br>
@@ -83,6 +45,50 @@ if(isset($_POST['submit'])){
 				<p class="p">You don't have an account? Then <a href="register.php">Register</a> here.</p>
 			</div>
 		</form>
+
+		<?php
+		// Check if the form has been submitted
+		if ($_SERVER["REQUEST_METHOD"] == "POST") {
+			// Get the user's input from the form
+			$email = $_POST["email"];
+			$passwordd = $_POST["password"];
+
+			// Connect to the database
+			$servername = "localhost";
+			$username = "root";
+			$password = "";
+			$dbname = "fitshape";
+
+			$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+			if (!$conn) {
+				die("Connection failed: " . mysqli_connect_error());
+			}
+
+
+			// Prepare the SQL statement to retrieve the user's information from the database
+			$sql = "SELECT * FROM user_details WHERE email = '$email' AND password = '$passwordd'";
+			$result = $conn->query($sql);
+
+			// Check if the query returned any results
+			if ($result->num_rows > 0) {
+				// The user's credentials are valid, so log them in
+				session_start();
+				$_SESSION["email"] = $email;
+				header("Location: profile.php");
+				echo "<script>alert('Login Successful !')</script>";
+			} else {
+				// The user's credentials are invalid, so display an error message
+				echo "<script>alert('Invalid username or password.')</script>";
+			}
+
+			// Close the database connection
+			$conn->close();
+		}
+	?>
 	</div>
 </body>
 </html>
+
+
+

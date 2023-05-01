@@ -625,6 +625,14 @@ if(isset($_POST['btnDelete'])){
    }
 }
 
+if(isset($_POST['btnCLEAR'])){
+
+  $usernamee = ""; $email = ""; $age = ""; $country = ""; $date = "";
+  $shoulder = ""; $bust = ""; $waist = ""; $hip = "";
+  $weight = ""; $height = "";
+  $body_shape = "";
+}
+
 ?>
 
 <br>
